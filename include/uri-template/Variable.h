@@ -79,6 +79,9 @@ public:
     const std::string& Name() const;
     const Modifier& Mod() const;
 
+    bool operator==(const Variable& rhs) const;
+    bool operator!=(const Variable& rhs) const;
+
 private:
     std::string name_;
     std::shared_ptr<Modifier> modifier_;

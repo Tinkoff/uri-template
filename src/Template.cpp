@@ -32,6 +32,16 @@ const std::string& URI::Template::Literal::String() const
     return lit_string_;
 }
 
+bool URI::Template::Literal::operator==(const Literal& rhs) const
+{
+    return lit_string_ == rhs.lit_string_;
+}
+
+bool URI::Template::Literal::operator!=(const Literal& rhs) const
+{
+    return !(*this == rhs);
+}
+
 URI::Template::Expression::Expression(std::shared_ptr<Operator>&& oper, std::vector<Variable>&& variables)
     : oper_(std::move(oper))
     , var_list_(std::move(variables))
@@ -49,6 +59,16 @@ const URI::Template::Operator& URI::Template::Expression::Oper() const
 const std::vector<URI::Template::Variable>& URI::Template::Expression::Vars() const
 {
     return var_list_;
+}
+
+bool URI::Template::Expression::operator==(const Expression& rhs) const
+{
+    return oper_ == rhs.oper_ && var_list_ == rhs.var_list_;
+}
+
+bool URI::Template::Expression::operator!=(const Expression& rhs) const
+{
+    return !(*this == rhs);
 }
 
 bool URI::Template::Template::IsTemplated() const

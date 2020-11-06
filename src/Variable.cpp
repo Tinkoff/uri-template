@@ -172,3 +172,13 @@ const URI::Template::Modifier& URI::Template::Variable::Mod() const
 {
     return *modifier_;
 }
+
+bool URI::Template::Variable::operator==(const Variable& rhs) const
+{
+    return name_ == rhs.name_ && modifier_ == rhs.modifier_ && length_ == rhs.length_;
+}
+
+bool URI::Template::Variable::operator!=(const Variable& rhs) const
+{
+    return !(*this == rhs);
+}
