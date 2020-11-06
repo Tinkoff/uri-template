@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
 
 set(URITEMPLATE_VERSION_MAJOR "1")
 set(URITEMPLATE_VERSION_MINOR "0")
-set(URITEMPLATE_VERSION_RELEASE "0")
+set(URITEMPLATE_VERSION_RELEASE "1")
 set(URITEMPLATE_VERSION_STRING "${URITEMPLATE_VERSION_MAJOR}.${URITEMPLATE_VERSION_MINOR}.${URITEMPLATE_VERSION_RELEASE}")
 set(URITEMPLATE_LIB_VERSION ${URITEMPLATE_VERSION_STRING})
 set(URITEMPLATE_LIB_SOVERSION "${URITEMPLATE_VERSION_MAJOR}")
@@ -18,10 +18,10 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_POSITION_INDEPENDENT_CODE ON)
 
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DBOOST_UUID_RANDOM_GENERATOR_COMPAT")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unneeded-internal-declaration")
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wno-unused-local-typedef")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra \
+    -Wunused-variable -Wunused-parameter \
+    -Wunused-function -Wunused -Wno-system-headers \
+    -Wno-deprecated -Woverloaded-virtual -Wwrite-strings")
 
 # compile in release with debug info mode by default
 if(NOT CMAKE_BUILD_TYPE)
@@ -108,10 +108,11 @@ export(EXPORT uritemplateTargets
     FILE ${uritemplate_TARGETS_CONFIG}
     NAMESPACE ${PROJECT_NAME}::)
 
-if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-    include(CTest)
-endif()
-
 if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME AND BUILD_TESTING)
+    set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+    set(CMAKE_C_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage")
+    set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_CXX_FLAGS} -fprofile-arcs -ftest-coverage -lgcov")
+
+    include(CTest)
     add_subdirectory(test)
 endif()

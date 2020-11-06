@@ -34,9 +34,6 @@ URI::Template::Expression URI::Template::ParseExpression(const std::string& expr
 
         switch (parsing) {
         case ExprParts::OPERATOR:
-            if (expr_oper) {
-                throw std::runtime_error("operator parsed twice");
-            }
             for (const auto& known_oper : URI::Template::kKnownOperators) {
                 if (cur_char == known_oper->Start()) {
                     expr_oper = known_oper;

@@ -26,11 +26,14 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
                  EXCLUDE_FROM_ALL)
 
-add_executable(matching matching.cpp)
+add_executable(basic basic.cpp)
 add_executable(parsing parsing.cpp)
+add_executable(matching matching.cpp)
 
-target_link_libraries(matching uri-template::uri-template gtest_main)
+target_link_libraries(basic uri-template::uri-template gtest_main)
 target_link_libraries(parsing uri-template::uri-template gtest_main)
+target_link_libraries(matching uri-template::uri-template gtest_main)
 
-add_test(NAME matching COMMAND matching)
+add_test(NAME basic COMMAND basic)
 add_test(NAME parsing COMMAND parsing)
+add_test(NAME matching COMMAND matching)
