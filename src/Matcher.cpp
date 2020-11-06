@@ -224,9 +224,6 @@ std::optional<URI::Template::Match> URI::Template::MatchExpression(const Express
 
     auto match_and_store = [&exp_vars, &exp_oper, &values](std::optional<std::string>&& raw_value,
                                                            std::size_t& pos) -> bool {
-        if (pos >= exp_vars.size()) {
-            return false;
-        }
         if (exp_oper.Named() && raw_value && pos != exp_vars.size() - 1) {
             // if it is named, lookup for closest same-name variable,
             // variables in-between will be undefined

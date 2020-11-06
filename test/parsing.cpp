@@ -5,9 +5,11 @@ TEST_P(TemplateNotParse, Test)
     ASSERT_TRUE(NotParsed(GetParam()));
 }
 
+// clang-format off
 INSTANTIATE_TEST_CASE_P(
     Simple, TemplateNotParse,
     ::testing::Values(
+        TestParams{"{}", "", {/* not parsed */}},
         TestParams{"{/id*", "", {/* not parsed */}},
         TestParams{"/id*}", "", {/* not parsed */}},
         TestParams{"{/?id}", "", {/* not parsed */}},
@@ -34,7 +36,8 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"/{default-graph-uri}", "", {/* not parsed */}},
         TestParams{"/sparql{?query,default-graph-uri}", "", {/* not parsed */}},
         TestParams{"/sparql{?query){&default-graph-uri*}", "", {/* not parsed */}},
-        TestParams{"/resolution{?x, y}" , "", {/* not parsed */}}
+        TestParams{"/resolution{?x, y}" , "", {/* not parsed */}},
+        TestParams{"{var:3000000000000}" , "", {/* not parsed */}}
     )
 );
 // clang-format on

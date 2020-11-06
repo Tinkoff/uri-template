@@ -18,8 +18,13 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{var}", "value",
                    {{"var", URI::Template::VarValue("value")}}
         },
+        TestParams{"{undef}", "",
+                   {{"undef", URI::Template::VarValue()}}
+        },
         TestParams{"asd{var}asd", "asdvalueasd",
                    {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"asd", "asd", {}
         },
         TestParams{"{hello}", "Hello%20World%21",
                    {{"hello", URI::Template::VarValue("Hello%20World%21")}}
@@ -79,6 +84,30 @@ INSTANTIATE_TEST_CASE_P(
                    {{"var", URI::Template::VarValue("val")}}
         },
         TestParams{"{var:30}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:300}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:3000}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:30000}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:300000}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:3000000}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:30000000}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:300000000}", "value",
+                   {{"var", URI::Template::VarValue("value")}}
+        },
+        TestParams{"{var:3000000000}", "value",
                    {{"var", URI::Template::VarValue("value")}}
         },
         TestParams{"{list}", "red,green,blue",
@@ -596,7 +625,10 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{val}", "*bar", {/* not matched */}},
         TestParams{"{val}", "+bar", {/* not matched */}},
         TestParams{"{val}", ";bar", {/* not matched */}},
-        TestParams{"{val}", "=bar", {/* not matched */}}
+        TestParams{"{val}", "=bar", {/* not matched */}},
+        TestParams{"{val}", "val=bar", {/* not matched */}},
+        TestParams{"{val}", "val==bar", {/* not matched */}},
+        TestParams{"foo", "bar", {/* not matched */}}
     )
 );
 
@@ -661,6 +693,7 @@ INSTANTIATE_TEST_CASE_P(
 INSTANTIATE_TEST_CASE_P(
     Slash, TemplateNotMatch,
     ::testing::Values(
+        TestParams{"{/val}", "/a/b", {/* not matched */}},
         TestParams{"{/val}", "/:", {/* not matched */}},
         TestParams{"{/val}", "//", {/* not matched */}},
         TestParams{"{/val}", "/?", {/* not matched */}},
@@ -719,6 +752,8 @@ INSTANTIATE_TEST_CASE_P(
 INSTANTIATE_TEST_CASE_P(
     Semicolon, TemplateNotMatch,
     ::testing::Values(
+        TestParams{"{;val}", ";wal=a", {/* not matched */}},
+        TestParams{"{;val}", ";val=a;b", {/* not matched */}},
         TestParams{"{;val}", ";val=:", {/* not matched */}},
         TestParams{"{;val}", ";val=/", {/* not matched */}},
         TestParams{"{;val}", ";val=?", {/* not matched */}},
@@ -777,6 +812,7 @@ INSTANTIATE_TEST_CASE_P(
 INSTANTIATE_TEST_CASE_P(
     Question, TemplateNotMatch,
     ::testing::Values(
+        TestParams{"{?val}", "?val=a&val=b", {/* not matched */}},
         TestParams{"{?val}", "?val=:", {/* not matched */}},
         TestParams{"{?val}", "?val=/", {/* not matched */}},
         TestParams{"{?val}", "?val=?", {/* not matched */}},
