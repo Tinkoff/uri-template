@@ -23,6 +23,9 @@ public:
     std::size_t Size() const;
     const std::string& String() const;
 
+    bool operator==(const Literal& rhs) const;
+    bool operator!=(const Literal& rhs) const;
+
 private:
     std::string lit_string_;
 };
@@ -41,6 +44,9 @@ public:
 
     const Operator& Oper() const;
     const std::vector<Variable>& Vars() const;
+
+    bool operator==(const Expression& rhs) const;
+    bool operator!=(const Expression& rhs) const;
 
 private:
     std::shared_ptr<Operator> oper_;
@@ -91,6 +97,16 @@ public:
     inline PartType Type() const
     {
         return type_;
+    }
+
+    inline bool operator==(const Part& rhs) const
+    {
+        return type_ == rhs.type_ && part_ == rhs.part_;
+    }
+
+    inline bool operator!=(const Part& rhs) const
+    {
+        return !(*this == rhs);
     }
 
 private:
