@@ -112,6 +112,7 @@ std::string URI::Template::VarValue::Print() const
             result += "'" + part + "', ";
         }
         if (result.size() > 1) {
+            // remove trailing ", "
             result.pop_back();
             result.pop_back();
         }
@@ -123,6 +124,7 @@ std::string URI::Template::VarValue::Print() const
             result += "'" + key + "': '" + value + "', ";
         }
         if (result.size() > 1) {
+            // remove trailing ", "
             result.pop_back();
             result.pop_back();
         }

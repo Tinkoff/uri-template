@@ -10,7 +10,7 @@ namespace Template {
 enum class ModifierType
 {
     NONE, // no modifier
-    LENGTH, // variable expansion is limited in legth
+    LENGTH, // variable expansion is limited in length
     EXPLODE // expansion process is applied to each member of a composite value
 };
 

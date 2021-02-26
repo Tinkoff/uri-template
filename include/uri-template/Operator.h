@@ -9,8 +9,8 @@ namespace Template {
 enum class OperatorType
 {
     NONE, // no operator
-    RESERVED_CHARS, // Reserved character strings
-    FRAGMENT, // Fragment identifiers prefixed by "#";
+    RESERVED_CHARS, // reserved character strings
+    FRAGMENT, // fragment identifiers prefixed by "#";
     LABEL, // name labels or extensions prefixed by "."
     PATH, // path segments prefixed by "/"
     PATH_PARAMETER, // path parameter name or name=value pairs prefixed by ";"

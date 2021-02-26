@@ -308,11 +308,11 @@ std::optional<URI::Template::Match> URI::Template::MatchExpression(const Express
                     if (!raw_value) {
                         raw_value = std::string();
                     }
-                    // note that a moved-from std::optional still contains a value:
-                    // https://en.cppreference.com/w/cpp/utility/optional/operator%3D
                     if (!match_and_store(std::move(raw_value), matched_vars)) {
                         return std::nullopt;
                     }
+                    // note that a moved-from std::optional still contains a value:
+                    // https://en.cppreference.com/w/cpp/utility/optional/operator%3D
                     raw_value->clear();
                 }
             } else if (char_allowed) {
