@@ -1,5 +1,7 @@
 #include "uri-template/Operator.h"
 
+const char URI::Template::Operator::kNoCharacter = '\0';
+
 URI::Template::OperatorType URI::Template::OpNoop::Type() const
 {
     return OperatorType::NONE;
@@ -8,6 +10,11 @@ URI::Template::OperatorType URI::Template::OpNoop::Type() const
 char URI::Template::OpNoop::Start() const
 {
     throw std::runtime_error("NONE operator has no start");
+}
+
+char URI::Template::OpNoop::First() const
+{
+    return Operator::kNoCharacter;
 }
 
 char URI::Template::OpNoop::Separator() const
@@ -60,6 +67,11 @@ char URI::Template::OpFragment::Start() const
     return '#';
 }
 
+char URI::Template::OpFragment::First() const
+{
+    return '#';
+}
+
 char URI::Template::OpFragment::Separator() const
 {
     return ',';
@@ -91,6 +103,11 @@ URI::Template::OperatorType URI::Template::OpLabel::Type() const
 }
 
 char URI::Template::OpLabel::Start() const
+{
+    return '.';
+}
+
+char URI::Template::OpLabel::First() const
 {
     return '.';
 }
@@ -130,6 +147,11 @@ char URI::Template::OpPath::Start() const
     return '/';
 }
 
+char URI::Template::OpPath::First() const
+{
+    return '/';
+}
+
 char URI::Template::OpPath::Separator() const
 {
     return '/';
@@ -161,6 +183,11 @@ URI::Template::OperatorType URI::Template::OpPathParam::Type() const
 }
 
 char URI::Template::OpPathParam::Start() const
+{
+    return ';';
+}
+
+char URI::Template::OpPathParam::First() const
 {
     return ';';
 }
@@ -200,6 +227,11 @@ char URI::Template::OpQuery::Start() const
     return '?';
 }
 
+char URI::Template::OpQuery::First() const
+{
+    return '?';
+}
+
 char URI::Template::OpQuery::Separator() const
 {
     return '&';
@@ -231,6 +263,11 @@ URI::Template::OperatorType URI::Template::OpQueryContinue::Type() const
 }
 
 char URI::Template::OpQueryContinue::Start() const
+{
+    return '&';
+}
+
+char URI::Template::OpQueryContinue::First() const
 {
     return '&';
 }

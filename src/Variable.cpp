@@ -112,6 +112,7 @@ std::string URI::Template::VarValue::Print() const
             result += "'" + part + "', ";
         }
         if (result.size() > 1) {
+            // remove trailing ", "
             result.pop_back();
             result.pop_back();
         }
@@ -123,6 +124,7 @@ std::string URI::Template::VarValue::Print() const
             result += "'" + key + "': '" + value + "', ";
         }
         if (result.size() > 1) {
+            // remove trailing ", "
             result.pop_back();
             result.pop_back();
         }
@@ -171,6 +173,11 @@ const std::string& URI::Template::Variable::Name() const
 const URI::Template::Modifier& URI::Template::Variable::Mod() const
 {
     return *modifier_;
+}
+
+unsigned URI::Template::Variable::Length() const
+{
+    return length_;
 }
 
 bool URI::Template::Variable::operator==(const Variable& rhs) const

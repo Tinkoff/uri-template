@@ -49,6 +49,7 @@ include(CMakeDependentOption)
 CMAKE_DEPENDENT_OPTION(BUILD_SHARED_LIBS "Build shared libraries" ON "NOT URITEMPLATE_BUNDLED_MODE" OFF)
 
 set(SOURCES
+    src/Expander.cpp
     src/Matcher.cpp
     src/Modifier.cpp
     src/Operator.cpp
