@@ -10,11 +10,12 @@ TEST_P(TemplateNotMatch, Test)
     ASSERT_TRUE(NotMatched(GetParam()));
 }
 
-
 // clang-format off
 INSTANTIATE_TEST_CASE_P(
     Simple, TemplateMatch,
     ::testing::Values(
+        TestParams{"", "", {}
+        },
         TestParams{"{var}", "value",
                    {{"var", URI::Template::VarValue("value")}}
         },
@@ -119,7 +120,7 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{keys}", "semi,%3B,dot,.,comma,%2C",
                    {{"keys", URI::Template::VarValue(std::vector<std::string>{"semi", "%3B", "dot", ".", "comma", "%2C"})}}
         },
-        TestParams{"{keys*}", "semi=%3B,dot=.,comma=%2C",
+        TestParams{"{keys*}", "dot=.,semi=%3B,comma=%2C",
                    {{"keys", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"comma", "%2C"},
                                                                                                   {"semi", "%3B"},
                                                                                                   {"dot", "."}})}}
@@ -197,7 +198,7 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"X{.keys}", "X.semi,%3B,dot,.,comma,%2C",
                    {{"keys", URI::Template::VarValue(std::vector<std::string>{"semi", "%3B", "dot", ".", "comma", "%2C"})}}
         },
-        TestParams{"X{.keys*}", "X.semi=%3B.dot=..comma=%2C",
+        TestParams{"X{.keys*}", "X.dot=..semi=%3B.comma=%2C",
                    {{"keys", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"comma", "%2C"},
                                                                                                   {"semi", "%3B"},
                                                                                                   {"dot", "."}})}}
@@ -270,7 +271,7 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{/keys}", "/semi,%3B,dot,.,comma,%2C",
                    {{"keys", URI::Template::VarValue(std::vector<std::string>{"semi", "%3B", "dot", ".", "comma", "%2C"})}}
         },
-        TestParams{"{/keys*}", "/semi=%3B/dot=./comma=%2C",
+        TestParams{"{/keys*}", "/dot=./semi=%3B/comma=%2C",
                    {{"keys", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"comma", "%2C"},
                                                                                                   {"semi", "%3B"},
                                                                                                   {"dot", "."}})}}
@@ -329,7 +330,7 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{;keys}", ";keys=semi,%3B,dot,.,comma,%2C",
                    {{"keys", URI::Template::VarValue(std::vector<std::string>{"semi", "%3B", "dot", ".", "comma", "%2C"})}}
         },
-        TestParams{"{;keys*}", ";semi=%3B;dot=.;comma=%2C",
+        TestParams{"{;keys*}", ";dot=.;semi=%3B;comma=%2C",
                    {{"keys", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"comma", "%2C"},
                                                                                                   {"semi", "%3B"},
                                                                                                   {"dot", "."}})}}
@@ -375,7 +376,7 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{?keys}", "?keys=semi,%3B,dot,.,comma,%2C",
                    {{"keys", URI::Template::VarValue(std::vector<std::string>{"semi", "%3B", "dot", ".", "comma", "%2C"})}}
         },
-        TestParams{"{?keys*}", "?semi=%3B&dot=.&comma=%2C",
+        TestParams{"{?keys*}", "?dot=.&semi=%3B&comma=%2C",
                    {{"keys", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"comma", "%2C"},
                                                                                                   {"semi", "%3B"},
                                                                                                   {"dot", "."}})}}
@@ -426,7 +427,7 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"{&keys}", "&keys=semi,%3B,dot,.,comma,%2C",
                    {{"keys", URI::Template::VarValue(std::vector<std::string>{"semi", "%3B", "dot", ".", "comma", "%2C"})}}
         },
-        TestParams{"{&keys*}", "&semi=%3B&dot=.&comma=%2C",
+        TestParams{"{&keys*}", "&dot=.&semi=%3B&comma=%2C",
                    {{"keys", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"comma", "%2C"},
                                                                                                   {"semi", "%3B"},
                                                                                                   {"dot", "."}})}}
@@ -500,7 +501,7 @@ INSTANTIATE_TEST_CASE_P(
                     {"result_type", URI::Template::VarValue("1")}}
         },
         TestParams{"/search.{format}{?params*}",
-                   "/search.json?q=URI%20Templates&geocode=487150&lang=en&page=5&result_type=1",
+                   "/search.json?geocode=487150&result_type=1&q=URI%20Templates&lang=en&page=5",
                    {{"format", URI::Template::VarValue("json")},
                     {"params", URI::Template::VarValue(std::unordered_map<std::string, std::string>{{"page", "5"},
                                                                                                     {"lang", "en"},
@@ -575,6 +576,7 @@ INSTANTIATE_TEST_CASE_P(
 INSTANTIATE_TEST_CASE_P(
     Simple, TemplateNotMatch,
     ::testing::Values(
+        TestParams{"", "qwerty", {/* not matched */}},
         TestParams{"{val}", ":", {/* not matched */}},
         TestParams{"{val}", "/", {/* not matched */}},
         TestParams{"{val}", "?", {/* not matched */}},

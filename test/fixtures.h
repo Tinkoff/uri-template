@@ -7,7 +7,7 @@ struct TestParams
 {
     std::string uri_template_str;
     std::string uri_str;
-    std::unordered_map<std::string, URI::Template::VarValue> expected_values;
+    std::unordered_map<std::string, URI::Template::VarValue> values;
 };
 
 inline std::ostream& operator<<(std::ostream& os, const TestParams& test_param)
@@ -16,7 +16,7 @@ inline std::ostream& operator<<(std::ostream& os, const TestParams& test_param)
     os << "'" << test_param.uri_str << "', ";
     os << "'" << test_param.uri_template_str << "', {";
     std::size_t i = 0;
-    for (const auto& [name, value] : test_param.expected_values) {
+    for (const auto& [name, value] : test_param.values) {
         if (i) {
             os << ", ";
         }
@@ -60,7 +60,7 @@ protected:
             return ::testing::AssertionFailure() << "'" << test_param.uri_template_str
                                                  << "' template is not matched against '" << test_param.uri_str << "'";
         }
-        for (const auto& [ex_name, ex_value] : test_param.expected_values) {
+        for (const auto& [ex_name, ex_value] : test_param.values) {
             const auto var_lookup = matched_values.find(ex_name);
             if (var_lookup == matched_values.end()) {
                 return ::testing::AssertionFailure() << "'" << ex_name << "' variable is not matched";
@@ -69,6 +69,18 @@ protected:
                 return ::testing::AssertionFailure()
                        << "'" << var_lookup->second << "' differs from expected '" << ex_value << "'";
             }
+        }
+
+        std::string expanded_str;
+        try {
+            expanded_str = URI::Template::ExpandTemplate(uri_template, test_param.values);
+        } catch (...) {
+            return ::testing::AssertionFailure() << "'" << test_param.uri_template_str << "' is not expanded";
+        }
+
+        if (expanded_str != test_param.uri_str) {
+            return ::testing::AssertionFailure()
+                   << "expanded '" << expanded_str << "' != '" << test_param.uri_str << "'";
         }
         return ::testing::AssertionSuccess();
     }
@@ -89,6 +101,33 @@ protected:
         if (URI::Template::MatchURI(uri_template, test_param.uri_str)) {
             return ::testing::AssertionFailure() << "'" << test_param.uri_template_str
                                                  << "' template is matched against '" << test_param.uri_str << "'";
+        }
+        return ::testing::AssertionSuccess();
+    }
+};
+
+class TemplateExpand: public testing::TestWithParam<TestParams>
+{
+protected:
+    ::testing::AssertionResult Expanded(const TestParams& test_param) const
+    {
+        URI::Template::Template uri_template;
+        try {
+            uri_template = URI::Template::ParseTemplate(test_param.uri_template_str);
+        } catch (...) {
+            return ::testing::AssertionFailure() << "'" << test_param.uri_template_str << "' is not parsed";
+        }
+
+        std::string expanded_str;
+        try {
+            expanded_str = URI::Template::ExpandTemplate(uri_template, test_param.values);
+        } catch (...) {
+            return ::testing::AssertionFailure() << "'" << test_param.uri_template_str << "' is not expanded";
+        }
+
+        if (expanded_str != test_param.uri_str) {
+            return ::testing::AssertionFailure()
+                   << "expanded '" << expanded_str << "' != '" << test_param.uri_str << "'";
         }
         return ::testing::AssertionSuccess();
     }
