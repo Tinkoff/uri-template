@@ -78,6 +78,7 @@ public:
     bool IsExploded() const;
     const std::string& Name() const;
     const Modifier& Mod() const;
+    unsigned Length() const;
 
     bool operator==(const Variable& rhs) const;
     bool operator!=(const Variable& rhs) const;

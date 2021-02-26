@@ -32,10 +32,13 @@ enum class OperatorType
 class Operator
 {
 public:
+    static const char kNoCharacter;
+
     virtual ~Operator() = default;
 
     virtual OperatorType Type() const = 0;
     virtual char Start() const = 0;
+    virtual char First() const = 0;
     virtual char Separator() const = 0;
     virtual bool Named() const = 0;
     virtual bool EmptyEq() const = 0;
@@ -51,6 +54,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
@@ -77,6 +81,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
@@ -92,6 +97,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
@@ -107,6 +113,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
@@ -122,6 +129,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
@@ -137,6 +145,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
@@ -152,6 +161,7 @@ public:
 
     virtual OperatorType Type() const override;
     virtual char Start() const override;
+    virtual char First() const override;
     virtual char Separator() const override;
     virtual bool Named() const override;
     virtual bool EmptyEq() const override;
