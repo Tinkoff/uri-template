@@ -93,6 +93,7 @@ TEST(OperatorDefinition, Test)
     const auto op_noop = URI::Template::OpNoop();
     ASSERT_EQ(op_noop.Type(), URI::Template::OperatorType::NONE);
     ASSERT_THROW(op_noop.Start(), std::runtime_error);
+    ASSERT_EQ(op_noop.First(), URI::Template::Operator::kNoCharacter);
     ASSERT_EQ(op_noop.Separator(), ',');
     ASSERT_EQ(op_noop.Named(), false);
     ASSERT_EQ(op_noop.EmptyEq(), false);
@@ -102,6 +103,7 @@ TEST(OperatorDefinition, Test)
     const auto op_reserved_chars = URI::Template::OpReservedChars();
     ASSERT_EQ(op_reserved_chars.Type(), URI::Template::OperatorType::RESERVED_CHARS);
     ASSERT_EQ(op_reserved_chars.Start(), '+');
+    ASSERT_EQ(op_reserved_chars.First(), URI::Template::Operator::kNoCharacter);
     ASSERT_EQ(op_reserved_chars.Separator(), ',');
     ASSERT_EQ(op_reserved_chars.Named(), false);
     ASSERT_EQ(op_reserved_chars.EmptyEq(), false);
@@ -111,6 +113,7 @@ TEST(OperatorDefinition, Test)
     const auto op_fragment = URI::Template::OpFragment();
     ASSERT_EQ(op_fragment.Type(), URI::Template::OperatorType::FRAGMENT);
     ASSERT_EQ(op_fragment.Start(), '#');
+    ASSERT_EQ(op_fragment.First(), '#');
     ASSERT_EQ(op_fragment.Separator(), ',');
     ASSERT_EQ(op_fragment.Named(), false);
     ASSERT_EQ(op_fragment.EmptyEq(), false);
@@ -120,6 +123,7 @@ TEST(OperatorDefinition, Test)
     const auto op_label = URI::Template::OpLabel();
     ASSERT_EQ(op_label.Type(), URI::Template::OperatorType::LABEL);
     ASSERT_EQ(op_label.Start(), '.');
+    ASSERT_EQ(op_label.First(), '.');
     ASSERT_EQ(op_label.Separator(), '.');
     ASSERT_EQ(op_label.Named(), false);
     ASSERT_EQ(op_label.EmptyEq(), false);
@@ -129,6 +133,7 @@ TEST(OperatorDefinition, Test)
     const auto op_path = URI::Template::OpPath();
     ASSERT_EQ(op_path.Type(), URI::Template::OperatorType::PATH);
     ASSERT_EQ(op_path.Start(), '/');
+    ASSERT_EQ(op_path.First(), '/');
     ASSERT_EQ(op_path.Separator(), '/');
     ASSERT_EQ(op_path.Named(), false);
     ASSERT_EQ(op_path.EmptyEq(), false);
@@ -138,6 +143,7 @@ TEST(OperatorDefinition, Test)
     const auto op_path_param = URI::Template::OpPathParam();
     ASSERT_EQ(op_path_param.Type(), URI::Template::OperatorType::PATH_PARAMETER);
     ASSERT_EQ(op_path_param.Start(), ';');
+    ASSERT_EQ(op_path_param.First(), ';');
     ASSERT_EQ(op_path_param.Separator(), ';');
     ASSERT_EQ(op_path_param.Named(), true);
     ASSERT_EQ(op_path_param.EmptyEq(), false);
@@ -147,6 +153,7 @@ TEST(OperatorDefinition, Test)
     const auto op_query = URI::Template::OpQuery();
     ASSERT_EQ(op_query.Type(), URI::Template::OperatorType::QUERY);
     ASSERT_EQ(op_query.Start(), '?');
+    ASSERT_EQ(op_query.First(), '?');
     ASSERT_EQ(op_query.Separator(), '&');
     ASSERT_EQ(op_query.Named(), true);
     ASSERT_EQ(op_query.EmptyEq(), true);
@@ -156,6 +163,7 @@ TEST(OperatorDefinition, Test)
     const auto op_query_continue = URI::Template::OpQueryContinue();
     ASSERT_EQ(op_query_continue.Type(), URI::Template::OperatorType::QUERY_CONTINUE);
     ASSERT_EQ(op_query_continue.Start(), '&');
+    ASSERT_EQ(op_query_continue.First(), '&');
     ASSERT_EQ(op_query_continue.Separator(), '&');
     ASSERT_EQ(op_query_continue.Named(), true);
     ASSERT_EQ(op_query_continue.EmptyEq(), true);
