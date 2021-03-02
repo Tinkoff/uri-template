@@ -3,11 +3,11 @@
 [![Language C++](https://img.shields.io/badge/language-c++-blue.svg)](https://isocpp.org)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
-This library implements [URI Template](https://tools.ietf.org/html/rfc6570) with full support up to Level 4 providing **expansion** and **match** capabilities. It requires c++17 compiler support and have no dependencies.
+This library implements [URI Template](https://tools.ietf.org/html/rfc6570) with full support up to Level 4 providing **expansion** and **match** capabilities. It requires c++17 compiler support and has no dependencies.
 
 ## What?
 
-URI templates are convenient way to describe a range of possible URI by making some parts of it variable. For example, variety of resources:
+URI templates are a convenient way to describe a range of possible URI by making some parts of it variable. For example, a variety of resources:
 * `http://example.com/~fred/`
 * `http://example.com/~mark/`
 * `http://example.com/~admin/`
@@ -24,7 +24,7 @@ Could be described by – `http://example.com/search{?q,lang}`.
 
 A template is transformed into a URI by replacing each delimited expression with its value as defined by expansion rules and the values of variables.
 
-URI Templates can also be used in reverse for the purpose of variable matching: comparing the template to a fully formed URI in order to extract the variables. It only works well if the template expressions are delimited by the beginning or end of the URI or by characters that cannot be part of the expansion, otherwise some ambiguity is present. For example, a template `http://example.com/{foo}{bar}` matches `http://example.com/foobar`, but is is impossible to distinguish if:
+URI Templates can also be used in reverse for the purpose of variable matching: comparing the template to a fully formed URI in order to extract the variables. It only works well if the template expressions are delimited by the beginning or end of the URI or by characters that cannot be part of the expansion, otherwise, some ambiguity is present. For example, a template `http://example.com/{foo}{bar}` matches `http://example.com/foobar`, but is is impossible to distinguish if:
 * `foo='foobar'` and `bar` is undefined; or
 * `foo` is undefined and `bar='foobar'`
 
@@ -41,7 +41,7 @@ URI Templates are presented as instances of `URI::Template::Template` class. It 
 
 classes.
 
-From there you can provide values for template variables with `URI::Template::VarValue` objects and expand it, or use `URI::Template::MatchURI()` to test if some URI matches a template, i.e. if it can be expanded from a template if correct values are provided.
+From there you can provide values for template variables with `URI::Template::VarValue` objects and expand it, or use `URI::Template::MatchURI()` to test if some URI matches a template, i.e. if it can be expanded from a template with correct values provided.
 
 ### Example
 
