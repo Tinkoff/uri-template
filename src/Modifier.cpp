@@ -1,5 +1,7 @@
 #include "uri-template/Modifier.h"
 
+#include <stdexcept>
+
 URI::Template::ModifierType URI::Template::ModNoop::Type() const
 {
     return ModifierType::NONE;
