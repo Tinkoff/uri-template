@@ -1,5 +1,7 @@
 #include "uri-template/Operator.h"
 
+#include <stdexcept>
+
 const char URI::Template::Operator::kNoCharacter = '\0';
 
 URI::Template::OperatorType URI::Template::OpNoop::Type() const
