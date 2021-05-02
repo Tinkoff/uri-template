@@ -3,6 +3,31 @@
 #include "uri-template/uri-template.h"
 #include "gtest/gtest.h"
 
+namespace {
+    bool ExpandedEqual(const std::string& str1, const std::string& str2) {
+        if (str1 == str2) {
+            return true;
+        }
+        // DICT VarValue (std::unordered_map) may be expanded with any order
+        // Compare length and set of characteds
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+
+        std::unordered_set<char> uri_characters;
+        for (const auto& c : str2) {
+            uri_characters.insert(c);
+        }
+        for (const auto& c : str1) {
+            if (uri_characters.count(c) == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+}
+
 struct TestParams
 {
     std::string uri_template_str;
@@ -78,9 +103,9 @@ protected:
             return ::testing::AssertionFailure() << "'" << test_param.uri_template_str << "' is not expanded";
         }
 
-        if (expanded_str != test_param.uri_str) {
+        if (!ExpandedEqual(expanded_str, test_param.uri_str)) {
             return ::testing::AssertionFailure()
-                   << "expanded '" << expanded_str << "' != '" << test_param.uri_str << "'";
+                   << "expanded '" << expanded_str << "' != expected '" << test_param.uri_str << "'";
         }
         return ::testing::AssertionSuccess();
     }
@@ -125,9 +150,9 @@ protected:
             return ::testing::AssertionFailure() << "'" << test_param.uri_template_str << "' is not expanded";
         }
 
-        if (expanded_str != test_param.uri_str) {
+        if (!ExpandedEqual(expanded_str, test_param.uri_str)) {
             return ::testing::AssertionFailure()
-                   << "expanded '" << expanded_str << "' != '" << test_param.uri_str << "'";
+                   << "expanded '" << expanded_str << "' != expected '" << test_param.uri_str << "'";
         }
         return ::testing::AssertionSuccess();
     }
