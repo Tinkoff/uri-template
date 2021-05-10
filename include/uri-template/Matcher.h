@@ -2,6 +2,8 @@
 
 #include "Template.h"
 
+#include <optional>
+
 namespace URI {
 namespace Template {
 
