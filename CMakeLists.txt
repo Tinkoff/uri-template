@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 
 set(URITEMPLATE_VERSION_MAJOR "1")
 set(URITEMPLATE_VERSION_MINOR "1")
-set(URITEMPLATE_VERSION_RELEASE "2")
+set(URITEMPLATE_VERSION_RELEASE "3")
 set(URITEMPLATE_SUMMARY "C++ library")
 set(URITEMPLATE_DESCRIPTION "URI Templates expansion and reverse-matching for C++")
 set(URITEMPLATE_REPOSITORY_URL "https://github.com/TinkoffCreditSystems/uri-template")
