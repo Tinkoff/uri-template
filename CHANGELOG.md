@@ -1,3 +1,16 @@
+## 1.1.3 (2021-05-11)
+
+### Fixes
+
+* Include `<optional>` where needed
+
+### Misc
+
+* Fix build and install for MSVC
+* Fix build shared lib on MSVC
+* Remove unconditional fPIC
+
+
 ## 1.1.2 (2021-05-02)
 
 ### Misc
