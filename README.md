@@ -1,7 +1,9 @@
 # URI-template
 
-[![Language C++](https://img.shields.io/badge/language-c++-blue.svg)](https://isocpp.org)
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Language C++](https://img.shields.io/badge/language-c++-blue.svg?logo=c%2B%2B)](https://isocpp.org)
+[![Github releases](https://img.shields.io/github/release/TinkoffCreditSystems/uri-template.svg)](https://github.com/TinkoffCreditSystems/uri-template/releases)
+[![Conan Package](https://img.shields.io/badge/Conan-package-blueviolet)](https://conan.io/center/tcsbank-uri-template)
+[![License](https://img.shields.io/github/license/TinkoffCreditSystems/uri-template.svg)](./LICENSE)
 
 This library implements [URI Template](https://tools.ietf.org/html/rfc6570) with full support up to Level 4 providing **expansion** and **match** capabilities. It requires c++17 compiler support and has no dependencies.
 
