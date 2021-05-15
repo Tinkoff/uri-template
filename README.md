@@ -86,52 +86,62 @@ q=cat
 Template expanded: http://example.com/search?q=cat&lang=en
 ```
 
+## How to use in your project
+
+Generally, to use this library you need to tell your compiler where to lookup for its' headers and library. For gcc/clang it can be done via `-I` and `-l` flags. Any particular situation depends on what you are using to build your project.
+
+### Use installed
+
+Easiest way is to install this library onto your system. To do so, execute these commands from `uri-template` folder (sudo may be required):
+
+```bash
+cmake -H. -Bbuild -DUCONFIG_BUILD_TESTING=OFF -DUCONFIG_BUILD_DOCS=OFF
+cmake --build ./build --target install
+```
+
+This will put uri-template headers into system default folder. From there you should be able to use it like any other library (`#include <uri-template/uri-template.h>` and so on).
+
+### Manually
+
+If you [have installed](#use-installed) uri-template then you don't need to do anything (probably), just `#include`. If you don't want to install, pass an `-I` flag with path to uri-template include folder and `-l` with path to compiled library. For example, if you cloned it into `~/uri-template/`, then use `-I~/uri-template/include -l~/uri-template/build/liburi-template.a` when calling gcc or clang.
+
+### Cmake
+
+If you [have installed](#use-installed) uri-template then use `find_package(uri-template REQUIRED)` and `target_link_libraries(<your target> uri-template::uri-template)` to make sure it was found properly. Alternatively, you can use cmake's [`add_subdirectory`](https://cmake.org/cmake/help/latest/command/add_subdirectory.html), [`ExternalProject`](https://cmake.org/cmake/help/latest/module/ExternalProject.html), [`FetchContent`](https://cmake.org/cmake/help/latest/module/FetchContent.html) to bring it and include in configure stage of you project.
+
+Also, this may be helpful - https://cliutils.gitlab.io/modern-cmake/
+
 ## How to build
 
-This library supposed to be somewhat multi-platform, however, it was tested and mainly used on ubuntu and macOS. Therefore build instructions are given for only these OSes.
-
-### Ubuntu dependencies
-
-```bash
-sudo apt update
-sudo apt install build-essential cmake
-```
-
-### macOS dependencies
-
-```bash
-brew install cmake pkg-config
-```
-
-### Build
-
+This library supposed to be somewhat multi-platform, however, it was tested and mainly used on ubuntu and macOS. </br>
 Prefer [out-of-source](https://gitlab.kitware.com/cmake/community/-/wikis/FAQ#what-is-an-out-of-source-build) building:
 
 ```bash
-mkdir build
-cd build
-cmake -DCMAKE_BUILD_TYPE=Debug ..
-make -j$(nproc)
-make install
+cmake -H. -Bbuild
+cmake --build ./build
 ```
 
-You can install it (sudo may be required):
+To install (sudo may be required):
 ```bash
-make install
+cmake -H. -Bbuild -DUCONFIG_BUILD_TESTING=OFF -DUCONFIG_BUILD_DOCS=OFF
+cmake --build ./build --target install
 ```
 
 Or test:
 ```bash
-cmake -DCMAKE_BUILD_TYPE=Debug -DBUILD_TESTING=ON ..
-make test
+cmake -H. -Bbuild -DUCONFIG_BUILD_TESTING=ON
+cmake --build ./build
+cmake -E chdir ./build ctest --output-on-failure
 ```
+
+*All these commands assume you are in uconfig root folder*
 
 ### Cmake options
 
-* **CMAKE_BUILD_TYPE** - [build type](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html). `RelWithDebInfo` by default.
-* **BUILD_SHARED_LIBS** - [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `ON` by default.
-* **BUILD_TESTING** - [build tests or not](https://cmake.org/cmake/help/latest/module/CTest.html). `OFF` by default.
-* **URITEMPLATE_BUNDLED_MODE** - if the library is being built as a part of another project. If this options is set then *BUILD_SHARED_LIBS* forces to be OFF. Defined by `"${PROJECT_SOURCE_DIR}" == "${CMAKE_SOURCE_DIR}"` by default.
+* **CMAKE_BUILD_TYPE** – [build type](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html). `RelWithDebInfo` by default.
+* **BUILD_SHARED_LIBS** – [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `ON` by default.
+* **UCONFIG_BUILD_TESTING** – build included unit-tests. `OFF` by default.
+* **UCONFIG_BUILD_DOCS** – build html (sphinx) reference docs. `OFF` by default.
 
 ## License
 
