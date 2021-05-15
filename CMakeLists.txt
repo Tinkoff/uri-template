@@ -4,7 +4,6 @@ set(URITEMPLATE_VERSION_MAJOR "1")
 set(URITEMPLATE_VERSION_MINOR "1")
 set(URITEMPLATE_VERSION_RELEASE "3")
 set(URITEMPLATE_SUMMARY "C++ library")
-set(URITEMPLATE_DESCRIPTION "URI Templates expansion and reverse-matching for C++")
 set(URITEMPLATE_REPOSITORY_URL "https://github.com/TinkoffCreditSystems/uri-template")
 set(URITEMPLATE_LICENSE "${CMAKE_CURRENT_SOURCE_DIR}/LICENSE")
 set(URITEMPLATE_README "${CMAKE_CURRENT_SOURCE_DIR}/README.md")
@@ -13,7 +12,11 @@ set(URITEMPLATE_VERSION_STRING "${URITEMPLATE_VERSION_MAJOR}.${URITEMPLATE_VERSI
 ## Make sure that custom modules are found
 set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${CMAKE_CURRENT_SOURCE_DIR})
 
-project(uri-template VERSION "${URITEMPLATE_VERSION_STRING}" LANGUAGES CXX)
+## Declare project
+project("uri-template" LANGUAGES CXX
+                       VERSION "${URITEMPLATE_VERSION_STRING}"
+                       DESCRIPTION "URI Templates expansion and reverse-matching for C++"
+)
 
 
 ##############################################
@@ -42,32 +45,36 @@ if(WIN32 AND BUILD_SHARED_LIBS)
 endif()
 
 option(URITEMPLATE_BUILD_TESTING "Build included unit-tests" OFF)
+option(URITEMPLATE_BUILD_DOCS "Build sphinx generated docs" OFF)
 
 
 ##############################################
 # Create target and set properties
 
-set(SOURCES
-    src/Expander.cpp
-    src/Matcher.cpp
-    src/Modifier.cpp
-    src/Operator.cpp
-    src/Parser.cpp
-    src/Template.cpp
-    src/Variable.cpp
+set(UCONFIG_INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set(UCONFIG_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+
+
+set(UCONFIG_SOURCES ${UCONFIG_SRC_DIR}/Expander.cpp
+                    ${UCONFIG_SRC_DIR}/Matcher.cpp
+                    ${UCONFIG_SRC_DIR}/Modifier.cpp
+                    ${UCONFIG_SRC_DIR}/Operator.cpp
+                    ${UCONFIG_SRC_DIR}/Parser.cpp
+                    ${UCONFIG_SRC_DIR}/Template.cpp
+                    ${UCONFIG_SRC_DIR}/Variable.cpp
 )
 
 # liburi-template
-add_library(uri-template ${SOURCES})
-add_library(${PROJECT_NAME}::uri-template ALIAS uri-template)
+add_library(${PROJECT_NAME} ${UCONFIG_SOURCES})
+add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
-target_include_directories(uri-template
+target_include_directories(${PROJECT_NAME}
     PUBLIC
         $<INSTALL_INTERFACE:include>
         $<BUILD_INTERFACE:${CMAKE_CURRENT_SOURCE_DIR}/include>
 )
 
-set_target_properties(uri-template PROPERTIES
+set_target_properties(${PROJECT_NAME} PROPERTIES
     SOVERSION "${URITEMPLATE_VERSION_STRING}"
     VERSION "${URITEMPLATE_VERSION_STRING}"
 )
@@ -79,15 +86,15 @@ set_target_properties(uri-template PROPERTIES
 include(GNUInstallDirs)
 
 ## Install targets
-install(TARGETS uri-template
-        EXPORT uri-template-targets
+install(TARGETS ${PROJECT_NAME}
+        EXPORT ${PROJECT_NAME}-targets
         RUNTIME DESTINATION "${CMAKE_INSTALL_BINDIR}"
         LIBRARY DESTINATION "${CMAKE_INSTALL_LIBDIR}"
         ARCHIVE DESTINATION "${CMAKE_INSTALL_LIBDIR}"
 )
 
 ## Install headers
-install(DIRECTORY include/uri-template
+install(DIRECTORY ${UCONFIG_INC_DIR}/${PROJECT_NAME}
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
 
@@ -110,19 +117,12 @@ configure_package_config_file(${PROJECT_SOURCE_DIR}/uri-template-config.cmake.in
 ## Install cmake helpers
 install(FILES ${URITEMPLATE_PROJECT_CONFIG}
               ${URITEMPLATE_VERSION_CONFIG}
-    DESTINATION ${URITEMPLATE_CMAKE_INSTALL_DIR}
+        DESTINATION ${URITEMPLATE_CMAKE_INSTALL_DIR}
 )
 
-install(EXPORT uri-template-targets
+install(EXPORT ${PROJECT_NAME}-targets
         DESTINATION ${URITEMPLATE_CMAKE_INSTALL_DIR}
         NAMESPACE ${PROJECT_NAME}::
-)
-
-## Exporting from the build tree
-export(EXPORT
-    uri-template-targets
-    FILE ${CMAKE_CURRENT_BINARY_DIR}/uri-template-targets.cmake
-    NAMESPACE ${PROJECT_NAME}::
 )
 
 
