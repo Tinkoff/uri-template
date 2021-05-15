@@ -144,7 +144,7 @@ cmake -E chdir ./build ctest --output-on-failure
 ### Cmake options
 
 * **CMAKE_BUILD_TYPE** – [build type](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html). `RelWithDebInfo` by default.
-* **BUILD_SHARED_LIBS** – [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `ON` by default.
+* **BUILD_SHARED_LIBS** – [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `OFF` by default.
 * **UCONFIG_BUILD_TESTING** – build included unit-tests. `OFF` by default.
 * **UCONFIG_BUILD_DOCS** – build html (sphinx) reference docs. `OFF` by default.
 
