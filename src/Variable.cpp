@@ -151,7 +151,7 @@ URI::Template::Variable::Variable(std::string&& name, std::shared_ptr<Modifier>&
     , length_(length)
 {
     if (!modifier_) {
-        modifier_ = kNoopModifier;
+        modifier_ = NOOP_MODIFIER;
     }
 }
 

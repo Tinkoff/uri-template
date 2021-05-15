@@ -139,9 +139,9 @@ public:
 };
 
 /// Noop modifier instance to use for variables.
-inline const std::shared_ptr<Modifier> kNoopModifier = std::make_shared<ModNoop>();
+inline const std::shared_ptr<Modifier> NOOP_MODIFIER = std::make_shared<ModNoop>();
 /// Collection of different modifier instances to use for variables.
-inline const std::vector<std::shared_ptr<Modifier>> kKnownModifiers = {
+inline const std::vector<std::shared_ptr<Modifier>> KNOWN_MODIFIERS = {
     std::make_shared<ModLength>(),
     std::make_shared<ModExplode>(),
 };

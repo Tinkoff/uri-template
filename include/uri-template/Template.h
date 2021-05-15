@@ -6,6 +6,11 @@
 namespace URI {
 namespace Template {
 
+namespace detail { // NOLINT(readability-identifier-naming)
+template <typename...>
+struct typelist;
+}
+
 /**
  * URI-template literal part.
  * This class represent text part of a template. The characters inside this part are intended to be copied literally
@@ -142,7 +147,8 @@ public:
      *
      * @param[in] ...args Arguments to pass to the part constructor.
      */
-    template <class... Args>
+    template <typename... Args, typename = std::enable_if_t<!std::is_same<
+                                    detail::typelist<Part>, detail::typelist<std::decay_t<Args>...>>::value>>
     Part(Args&&... args)
         : part_(std::forward<Args>(args)...)
     {

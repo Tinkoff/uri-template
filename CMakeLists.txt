@@ -143,3 +143,11 @@ if(URITEMPLATE_BUILD_TESTING)
 
     add_subdirectory(test)
 endif()
+
+
+##############################################
+# Docs
+
+if(URITEMPLATE_BUILD_DOCS)
+    add_subdirectory(docs)
+endif()
