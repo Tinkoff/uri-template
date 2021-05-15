@@ -87,6 +87,10 @@ q=cat
 Template expanded: http://example.com/search?q=cat&lang=en
 ```
 
+## Detailed description
+
+For full API reference look here – https://tinkoffcreditsystems.github.io/uri-template/
+
 ## How to use in your project
 
 Generally, to use this library you need to tell your compiler where to lookup for its' headers and library. For gcc/clang it can be done via `-I` and `-l` flags. Any particular situation depends on what you are using to build your project.
