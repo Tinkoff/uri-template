@@ -108,11 +108,11 @@ This will put uri-template headers into system default folder. From there you sh
 
 ### Manually
 
-If you [have installed](#use-installed) uri-template then you don't need to do anything (probably), just `#include`. If you don't want to install, pass an `-I` flag with path to uri-template include folder and `-l` with path to compiled library. For example, if you cloned it into `~/uri-template/`, then use `-I~/uri-template/include -l~/uri-template/build/liburi-template.a` when calling gcc or clang.
+If you [have installed](#use-installed) uri-template then you only need to link with it via `-luri-template`. If you don't want to install, pass an `-I` flag with path to uri-template include folder and `-l` with path to library binary. For example, if you cloned it into `~/uri-template/` and build it there, then use `-I~/uri-template/include -l~/uri-template/build/liburi-template.a` when calling gcc or clang.
 
 ### Cmake
 
-If you [have installed](#use-installed) uri-template then use `find_package(uri-template REQUIRED)` and `target_link_libraries(<your target> uri-template::uri-template)` to make sure it was found properly. Alternatively, you can use cmake's [`add_subdirectory`](https://cmake.org/cmake/help/latest/command/add_subdirectory.html), [`ExternalProject`](https://cmake.org/cmake/help/latest/module/ExternalProject.html), [`FetchContent`](https://cmake.org/cmake/help/latest/module/FetchContent.html) to bring it and include in configure stage of you project.
+If you [have installed](#use-installed) uri-template then use `find_package(uri-template REQUIRED)` and `target_link_libraries(<your target> uri-template::uri-template)`. Alternatively, you can use cmake's [`add_subdirectory`](https://cmake.org/cmake/help/latest/command/add_subdirectory.html), [`ExternalProject`](https://cmake.org/cmake/help/latest/module/ExternalProject.html), [`FetchContent`](https://cmake.org/cmake/help/latest/module/FetchContent.html) to bring it and include in configure stage of you project.
 
 Also, this may be helpful - https://cliutils.gitlab.io/modern-cmake/
 
@@ -144,7 +144,7 @@ cmake -E chdir ./build ctest --output-on-failure
 ### Cmake options
 
 * **CMAKE_BUILD_TYPE** – [build type](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html). `RelWithDebInfo` by default.
-* **BUILD_SHARED_LIBS** – [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `ON` by default.
+* **BUILD_SHARED_LIBS** – [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `OFF` by default.
 * **UCONFIG_BUILD_TESTING** – build included unit-tests. `OFF` by default.
 * **UCONFIG_BUILD_DOCS** – build html (sphinx) reference docs. `OFF` by default.
 
