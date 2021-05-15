@@ -34,7 +34,7 @@ URI::Template::Expression URI::Template::ParseExpression(const std::string& expr
 
         switch (parsing) {
         case ExprParts::OPERATOR:
-            for (const auto& known_oper : URI::Template::kKnownOperators) {
+            for (const auto& known_oper : URI::Template::KNOWN_OPERATORS) {
                 if (cur_char == known_oper->Start()) {
                     expr_oper = known_oper;
                     break;
@@ -59,7 +59,7 @@ URI::Template::Expression URI::Template::ParseExpression(const std::string& expr
             [[fallthrough]];
 
         case ExprParts::MODIFIER:
-            for (const auto& known_mod : URI::Template::kKnownModifiers) {
+            for (const auto& known_mod : URI::Template::KNOWN_MODIFIERS) {
                 if (cur_char == known_mod->Start()) {
                     var_mod = known_mod;
                     break; // out of for loop

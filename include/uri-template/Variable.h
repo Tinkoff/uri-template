@@ -181,7 +181,7 @@ public:
      * Creates a variable with known name and modifiers.
      *
      * @param[in] name Name of the variable.
-     * @param[in] modifier Modifier for the variable. nullptr is equivalent to Template::kNoopModifier.
+     * @param[in] modifier Modifier for the variable. nullptr is equivalent to Template::NOOP_MODIFIER.
      * @param[in] length Prefix length if @p modifier is ModifierType::LENGTH.
      */
     Variable(std::string&& name, std::shared_ptr<Modifier>&& modifier, unsigned length);

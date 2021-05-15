@@ -589,10 +589,10 @@ public:
 };
 
 /// Noop operator instance to use for expressions.
-inline const std::shared_ptr<Operator> kNoopOperator = std::make_shared<OpNoop>();
+inline const std::shared_ptr<Operator> NOOP_OPERATOR = std::make_shared<OpNoop>();
 // clang-format off
 /// Collection of different operator instances to use for expressions.
-inline const std::vector<std::shared_ptr<Operator>> kKnownOperators = {
+inline const std::vector<std::shared_ptr<Operator>> KNOWN_OPERATORS = {
     std::make_shared<OpReservedChars>(),
     std::make_shared<OpFragment>(),
     std::make_shared<OpLabel>(),

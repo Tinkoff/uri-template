@@ -47,7 +47,7 @@ URI::Template::Expression::Expression(std::shared_ptr<Operator>&& oper, std::vec
     , var_list_(std::move(variables))
 {
     if (!oper_) {
-        oper_ = kNoopOperator;
+        oper_ = NOOP_OPERATOR;
     }
 }
 

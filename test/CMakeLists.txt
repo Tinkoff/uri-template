@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 set(CMAKE_MACOSX_RPATH 1)
 
 if(NOT TARGET testing)
