@@ -1,5 +1,12 @@
-cmake_minimum_required(VERSION 3.0 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.4 FATAL_ERROR)
 set(CMAKE_MACOSX_RPATH 1)
+
+if(NOT TARGET testing)
+    set(TETING_TARGET_LOCAL "True")
+    add_custom_target(testing COMMAND ${CMAKE_CTEST_COMMAND})
+else()
+    set(TETING_TARGET_LOCAL "False")
+endif()
 
 # Download and unpack googletest at configure time
 configure_file(CMakeLists.txt.in googletest-download/CMakeLists.txt)
@@ -26,17 +33,16 @@ add_subdirectory(${CMAKE_CURRENT_BINARY_DIR}/googletest-src
                  ${CMAKE_CURRENT_BINARY_DIR}/googletest-build
                  EXCLUDE_FROM_ALL)
 
-add_executable(basic basic.cpp)
-add_executable(parsing parsing.cpp)
-add_executable(matching matching.cpp)
-add_executable(expanding expanding.cpp)
+function(add_unit_test name)
+    add_executable(${name} ${ARGN})
+    target_link_libraries(${name} ${PROJECT_NAME}::${PROJECT_NAME} gtest_main)
+    add_test(NAME ${name} COMMAND $<TARGET_FILE:${name}>)
+    if (TETING_TARGET_LOCAL)
+        add_dependencies(testing ${name})
+    endif ()
+endfunction()
 
-target_link_libraries(basic uri-template::uri-template gtest_main)
-target_link_libraries(parsing uri-template::uri-template gtest_main)
-target_link_libraries(matching uri-template::uri-template gtest_main)
-target_link_libraries(expanding uri-template::uri-template gtest_main)
-
-add_test(NAME basic COMMAND basic)
-add_test(NAME parsing COMMAND parsing)
-add_test(NAME matching COMMAND matching)
-add_test(NAME expanding COMMAND expanding)
+add_unit_test(basic basic.cpp)
+add_unit_test(parsing parsing.cpp)
+add_unit_test(matching matching.cpp)
+add_unit_test(expanding expanding.cpp)
