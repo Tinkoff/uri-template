@@ -1,0 +1,13 @@
+.. _exhale_function_namespaceURI_1_1Template_1a145a6da5f2a133eef499df5e3f6cace8:
+
+Function URI::Template::ExpandTemplate
+======================================
+
+- Defined in :ref:`file_uri-template_Expander.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: URI::Template::ExpandTemplate(const Template&, const std::unordered_map<std::string, VarValue>&)

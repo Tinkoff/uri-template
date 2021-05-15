@@ -1,0 +1,27 @@
+.. _exhale_class_classURI_1_1Template_1_1Modifier:
+
+Class Modifier
+==============
+
+- Defined in :ref:`file_uri-template_Modifier.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public URI::Template::ModExplode`` (:ref:`exhale_class_classURI_1_1Template_1_1ModExplode`)
+- ``public URI::Template::ModLength`` (:ref:`exhale_class_classURI_1_1Template_1_1ModLength`)
+- ``public URI::Template::ModNoop`` (:ref:`exhale_class_classURI_1_1Template_1_1ModNoop`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::Modifier
+   :members:
+   :protected-members:
+   :undoc-members:

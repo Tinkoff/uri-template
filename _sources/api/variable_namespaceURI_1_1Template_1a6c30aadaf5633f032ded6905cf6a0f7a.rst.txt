@@ -1,0 +1,13 @@
+.. _exhale_variable_namespaceURI_1_1Template_1a6c30aadaf5633f032ded6905cf6a0f7a:
+
+Variable URI::Template::NOOP_OPERATOR
+=====================================
+
+- Defined in :ref:`file_uri-template_Operator.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: URI::Template::NOOP_OPERATOR

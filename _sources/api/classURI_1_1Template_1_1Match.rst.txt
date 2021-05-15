@@ -1,0 +1,16 @@
+.. _exhale_class_classURI_1_1Template_1_1Match:
+
+Class Match
+===========
+
+- Defined in :ref:`file_uri-template_Matcher.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::Match
+   :members:
+   :protected-members:
+   :undoc-members:

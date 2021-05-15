@@ -1,0 +1,13 @@
+
+.. _namespace_URI__Template__detail:
+
+Namespace URI::Template::detail
+===============================
+
+
+
+Classes
+-------
+
+
+- :ref:`exhale_struct_structURI_1_1Template_1_1detail_1_1typelist`

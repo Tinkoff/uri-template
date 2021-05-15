@@ -1,0 +1,13 @@
+.. _exhale_function_namespaceURI_1_1Template_1a35aefbc8e829ed6bc11c96a6e7ffd9fc:
+
+Function URI::Template::MatchExpression
+=======================================
+
+- Defined in :ref:`file_uri-template_Matcher.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: URI::Template::MatchExpression(const Expression&, const std::string&, std::size_t, std::size_t, char, std::unordered_map<std::string, VarValue> *)

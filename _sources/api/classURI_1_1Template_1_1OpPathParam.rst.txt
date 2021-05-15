@@ -1,0 +1,25 @@
+.. _exhale_class_classURI_1_1Template_1_1OpPathParam:
+
+Class OpPathParam
+=================
+
+- Defined in :ref:`file_uri-template_Operator.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public URI::Template::Operator`` (:ref:`exhale_class_classURI_1_1Template_1_1Operator`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::OpPathParam
+   :members:
+   :protected-members:
+   :undoc-members:

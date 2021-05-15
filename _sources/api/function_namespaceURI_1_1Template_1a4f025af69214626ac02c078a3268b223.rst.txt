@@ -1,0 +1,13 @@
+.. _exhale_function_namespaceURI_1_1Template_1a4f025af69214626ac02c078a3268b223:
+
+Function URI::Template::MatchVarValue
+=====================================
+
+- Defined in :ref:`file_uri-template_Matcher.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: URI::Template::MatchVarValue(const Variable&, const Operator&, std::optional<std::string>&&)

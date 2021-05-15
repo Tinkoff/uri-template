@@ -1,0 +1,16 @@
+.. _exhale_class_classURI_1_1Template_1_1Variable:
+
+Class Variable
+==============
+
+- Defined in :ref:`file_uri-template_Variable.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::Variable
+   :members:
+   :protected-members:
+   :undoc-members:

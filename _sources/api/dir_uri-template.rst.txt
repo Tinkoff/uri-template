@@ -1,0 +1,23 @@
+.. _dir_uri-template:
+
+
+Directory uri-template
+======================
+
+
+*Directory path:* ``uri-template``
+
+
+Files
+-----
+
+- :ref:`file_uri-template_Expander.h`
+- :ref:`file_uri-template_Matcher.h`
+- :ref:`file_uri-template_Modifier.h`
+- :ref:`file_uri-template_Operator.h`
+- :ref:`file_uri-template_Parser.h`
+- :ref:`file_uri-template_Template.h`
+- :ref:`file_uri-template_uri-template.h`
+- :ref:`file_uri-template_Variable.h`
+
+

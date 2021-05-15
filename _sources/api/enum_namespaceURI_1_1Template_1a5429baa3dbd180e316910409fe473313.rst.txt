@@ -1,0 +1,13 @@
+.. _exhale_enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313:
+
+Enum PartType
+=============
+
+- Defined in :ref:`file_uri-template_Template.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: URI::Template::PartType

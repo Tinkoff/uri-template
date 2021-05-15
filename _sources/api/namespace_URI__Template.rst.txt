@@ -1,0 +1,109 @@
+
+.. _namespace_URI__Template:
+
+Namespace URI::Template
+=======================
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI__Template__detail`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Expression`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Literal`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Match`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1ModExplode`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Modifier`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1ModLength`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1ModNoop`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Operator`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpFragment`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpLabel`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpNoop`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpPath`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpPathParam`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpQuery`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpQueryContinue`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpReservedChars`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Part`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Template`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Variable`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1VarValue`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592`
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1a2e389ee539108ed58a1328fac30e245d`
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313`
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a145a6da5f2a133eef499df5e3f6cace8`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a35aefbc8e829ed6bc11c96a6e7ffd9fc`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a4984f240c045e014e0a986fa774c5e2e`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1ade74ff3351fa7a0593d08ed1e30eebe6`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a4f025af69214626ac02c078a3268b223`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1aeb06c601e8854612917d07d41b4979e5`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a42a37e74c1dfc658d71da4bc57948079`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a141f5b8ee4c5dd211f76978a8ad2c986`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a48519beb1f721f5bcaaf9aa1dbb80788`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1ad13e1a394707c6d412b7a6bdf4d1526c`
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1aba0e009c74b1bcaef6cbbaa2d018c5f9`
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09`
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1a6c30aadaf5633f032ded6905cf6a0f7a`

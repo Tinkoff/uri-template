@@ -1,0 +1,13 @@
+.. _exhale_function_namespaceURI_1_1Template_1aeb06c601e8854612917d07d41b4979e5:
+
+Function URI::Template::operator<<
+==================================
+
+- Defined in :ref:`file_uri-template_Variable.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: URI::Template::operator<<(std::ostream&, const VarValue&)

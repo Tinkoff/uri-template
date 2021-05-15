@@ -1,0 +1,16 @@
+.. _exhale_class_classURI_1_1Template_1_1Template:
+
+Class Template
+==============
+
+- Defined in :ref:`file_uri-template_Template.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::Template
+   :members:
+   :protected-members:
+   :undoc-members:

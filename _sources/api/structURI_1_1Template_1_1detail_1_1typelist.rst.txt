@@ -1,0 +1,16 @@
+.. _exhale_struct_structURI_1_1Template_1_1detail_1_1typelist:
+
+Template Struct typelist
+========================
+
+- Defined in :ref:`file_uri-template_Template.h`
+
+
+Struct Documentation
+--------------------
+
+
+.. doxygenstruct:: URI::Template::detail::typelist
+   :members:
+   :protected-members:
+   :undoc-members:

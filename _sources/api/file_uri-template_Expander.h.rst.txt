@@ -1,0 +1,54 @@
+
+.. _file_uri-template_Expander.h:
+
+File Expander.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_uri-template>` (``uri-template``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+Definition (``uri-template/Expander.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_uri-template_Expander.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Template.h`` (:ref:`file_uri-template_Template.h`)
+
+- ``limits``
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI`
+
+- :ref:`namespace_URI__Template`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a145a6da5f2a133eef499df5e3f6cace8`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a48519beb1f721f5bcaaf9aa1dbb80788`
+

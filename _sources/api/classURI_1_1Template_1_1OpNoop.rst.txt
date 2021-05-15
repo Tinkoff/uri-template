@@ -1,0 +1,31 @@
+.. _exhale_class_classURI_1_1Template_1_1OpNoop:
+
+Class OpNoop
+============
+
+- Defined in :ref:`file_uri-template_Operator.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public URI::Template::Operator`` (:ref:`exhale_class_classURI_1_1Template_1_1Operator`)
+
+
+Derived Type
+************
+
+- ``public URI::Template::OpReservedChars`` (:ref:`exhale_class_classURI_1_1Template_1_1OpReservedChars`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::OpNoop
+   :members:
+   :protected-members:
+   :undoc-members:

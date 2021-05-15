@@ -1,0 +1,13 @@
+.. _exhale_enum_namespaceURI_1_1Template_1a2e389ee539108ed58a1328fac30e245d:
+
+Enum OperatorType
+=================
+
+- Defined in :ref:`file_uri-template_Operator.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: URI::Template::OperatorType

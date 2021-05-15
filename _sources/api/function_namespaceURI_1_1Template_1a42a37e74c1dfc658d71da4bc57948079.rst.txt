@@ -1,0 +1,13 @@
+.. _exhale_function_namespaceURI_1_1Template_1a42a37e74c1dfc658d71da4bc57948079:
+
+Function URI::Template::ParseExpression
+=======================================
+
+- Defined in :ref:`file_uri-template_Parser.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: URI::Template::ParseExpression(const std::string&)

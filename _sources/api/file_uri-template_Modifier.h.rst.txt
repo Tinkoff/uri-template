@@ -1,0 +1,80 @@
+
+.. _file_uri-template_Modifier.h:
+
+File Modifier.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_uri-template>` (``uri-template``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+Definition (``uri-template/Modifier.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_uri-template_Modifier.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``memory``
+
+- ``string``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_uri-template_Variable.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI`
+
+- :ref:`namespace_URI__Template`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classURI_1_1Template_1_1ModExplode`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Modifier`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1ModLength`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1ModNoop`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1ad13e1a394707c6d412b7a6bdf4d1526c`
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09`
+

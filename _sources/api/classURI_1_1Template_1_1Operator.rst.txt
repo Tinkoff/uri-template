@@ -1,0 +1,31 @@
+.. _exhale_class_classURI_1_1Template_1_1Operator:
+
+Class Operator
+==============
+
+- Defined in :ref:`file_uri-template_Operator.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Derived Types
+*************
+
+- ``public URI::Template::OpFragment`` (:ref:`exhale_class_classURI_1_1Template_1_1OpFragment`)
+- ``public URI::Template::OpLabel`` (:ref:`exhale_class_classURI_1_1Template_1_1OpLabel`)
+- ``public URI::Template::OpNoop`` (:ref:`exhale_class_classURI_1_1Template_1_1OpNoop`)
+- ``public URI::Template::OpPath`` (:ref:`exhale_class_classURI_1_1Template_1_1OpPath`)
+- ``public URI::Template::OpPathParam`` (:ref:`exhale_class_classURI_1_1Template_1_1OpPathParam`)
+- ``public URI::Template::OpQuery`` (:ref:`exhale_class_classURI_1_1Template_1_1OpQuery`)
+- ``public URI::Template::OpQueryContinue`` (:ref:`exhale_class_classURI_1_1Template_1_1OpQueryContinue`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::Operator
+   :members:
+   :protected-members:
+   :undoc-members:

@@ -1,0 +1,13 @@
+.. _exhale_function_namespaceURI_1_1Template_1a48519beb1f721f5bcaaf9aa1dbb80788:
+
+Function URI::Template::PctEncode
+=================================
+
+- Defined in :ref:`file_uri-template_Expander.h`
+
+
+Function Documentation
+----------------------
+
+
+.. doxygenfunction:: URI::Template::PctEncode(const std::string&, bool, std::size_t)

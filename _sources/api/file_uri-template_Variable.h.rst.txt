@@ -1,0 +1,84 @@
+
+.. _file_uri-template_Variable.h:
+
+File Variable.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_uri-template>` (``uri-template``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+Definition (``uri-template/Variable.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_uri-template_Variable.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Modifier.h`` (:ref:`file_uri-template_Modifier.h`)
+
+- ``memory``
+
+- ``ostream``
+
+- ``string``
+
+- ``unordered_map``
+
+- ``unordered_set``
+
+- ``variant``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_uri-template_Template.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI`
+
+- :ref:`namespace_URI__Template`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Variable`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1VarValue`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1aeb06c601e8854612917d07d41b4979e5`
+

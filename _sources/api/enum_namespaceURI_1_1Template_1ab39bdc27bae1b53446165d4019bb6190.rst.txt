@@ -1,0 +1,13 @@
+.. _exhale_enum_namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190:
+
+Enum VarType
+============
+
+- Defined in :ref:`file_uri-template_Variable.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: URI::Template::VarType

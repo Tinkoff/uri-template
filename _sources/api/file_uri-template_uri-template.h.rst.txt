@@ -1,0 +1,36 @@
+
+.. _file_uri-template_uri-template.h:
+
+File uri-template.h
+===================
+
+|exhale_lsh| :ref:`Parent directory <dir_uri-template>` (``uri-template``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+Definition (``uri-template/uri-template.h``)
+--------------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_uri-template_uri-template.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``uri-template/Expander.h`` (:ref:`file_uri-template_Expander.h`)
+
+- ``uri-template/Matcher.h`` (:ref:`file_uri-template_Matcher.h`)
+
+- ``uri-template/Parser.h`` (:ref:`file_uri-template_Parser.h`)
+
+
+
+
+

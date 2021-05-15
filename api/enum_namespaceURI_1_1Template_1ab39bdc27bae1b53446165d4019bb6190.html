@@ -1,0 +1,294 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Function URI::Template::ExpandExpression" href="function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75.html" /><link rel="prev" title="Enum PartType" href="enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313.html" />
+
+    <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
+        <title>Enum VarType - uri-template</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-api-overall: #cccccc;
+  --color-api-keyword: #e62569;
+  --color-api-name: #8ee22c;
+  --color-brand-content: #67d8ef;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-api-overall: #cccccc;
+  --color-api-keyword: #e62569;
+  --color-api-name: #8ee22c;
+  --color-brand-content: #67d8ef;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">uri-template</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">uri-template</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="unabridged_api.html">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_URI.html">Namespace URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_URI__Template.html">Namespace URI::Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_URI__Template__detail.html">Namespace URI::Template::detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structURI_1_1Template_1_1detail_1_1typelist.html">Template Struct typelist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Expression.html">Class Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Literal.html">Class Literal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Match.html">Class Match</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1ModExplode.html">Class ModExplode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Modifier.html">Class Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1ModLength.html">Class ModLength</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1ModNoop.html">Class ModNoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Operator.html">Class Operator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpFragment.html">Class OpFragment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpLabel.html">Class OpLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpNoop.html">Class OpNoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpPath.html">Class OpPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpPathParam.html">Class OpPathParam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpQuery.html">Class OpQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpQueryContinue.html">Class OpQueryContinue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpReservedChars.html">Class OpReservedChars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Part.html">Class Part</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Template.html">Class Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Variable.html">Class Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1VarValue.html">Class VarValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592.html">Enum ModifierType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1a2e389ee539108ed58a1328fac30e245d.html">Enum OperatorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313.html">Enum PartType</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Enum VarType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75.html">Function URI::Template::ExpandExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a145a6da5f2a133eef499df5e3f6cace8.html">Function URI::Template::ExpandTemplate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a35aefbc8e829ed6bc11c96a6e7ffd9fc.html">Function URI::Template::MatchExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a4984f240c045e014e0a986fa774c5e2e.html">Function URI::Template::MatchLiteral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1ade74ff3351fa7a0593d08ed1e30eebe6.html">Function URI::Template::MatchURI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a4f025af69214626ac02c078a3268b223.html">Function URI::Template::MatchVarValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1aeb06c601e8854612917d07d41b4979e5.html">Function URI::Template::operator&lt;&lt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a42a37e74c1dfc658d71da4bc57948079.html">Function URI::Template::ParseExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a141f5b8ee4c5dd211f76978a8ad2c986.html">Function URI::Template::ParseTemplate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a48519beb1f721f5bcaaf9aa1dbb80788.html">Function URI::Template::PctEncode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1ad13e1a394707c6d412b7a6bdf4d1526c.html">Variable URI::Template::KNOWN_MODIFIERS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1aba0e009c74b1bcaef6cbbaa2d018c5f9.html">Variable URI::Template::KNOWN_OPERATORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09.html">Variable URI::Template::NOOP_MODIFIER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1a6c30aadaf5633f032ded6905cf6a0f7a.html">Variable URI::Template::NOOP_OPERATOR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class_view_hierarchy.html">Class Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_view_hierarchy.html">File Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="enum-vartype">
+<span id="exhale-enum-namespaceuri-1-1template-1ab39bdc27bae1b53446165d4019bb6190"></span><h1>Enum VarType<a class="headerlink" href="#enum-vartype" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_uri-template_Variable.h.html#file-uri-template-variable-h"><span class="std std-ref">File Variable.h</span></a></p></li>
+</ul>
+<div class="section" id="enum-documentation">
+<h2>Enum Documentation<a class="headerlink" href="#enum-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp enum">
+<dt id="_CPPv4N3URI8Template7VarTypeE">
+<span id="_CPPv3N3URI8Template7VarTypeE"></span><span id="_CPPv2N3URI8Template7VarTypeE"></span><span class="target" id="namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190"></span><em class="property"><span class="pre">enum</span> </em><code class="sig-prename descclassname"><span class="pre">URI</span><span class="pre">::</span><span class="pre">Template</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">VarType</span></code><a class="headerlink" href="#_CPPv4N3URI8Template7VarTypeE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p><a class="reference internal" href="classURI_1_1Template_1_1Variable.html#classURI_1_1Template_1_1Variable"><span class="std std-ref">Variable</span></a> value type enumerator. </p>
+<p>Describes type of the variable in the template. </p>
+<p><em>Values:</em></p>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N3URI8Template7VarType9UNDEFINEDE">
+<span id="_CPPv3N3URI8Template7VarType9UNDEFINEDE"></span><span id="_CPPv2N3URI8Template7VarType9UNDEFINEDE"></span><span class="target" id="namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190a0db45d2a4141101bdfe48e3314cfbca3"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">UNDEFINED</span></code><a class="headerlink" href="#_CPPv4N3URI8Template7VarType9UNDEFINEDE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>value is not defined </p>
+</dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N3URI8Template7VarType6STRINGE">
+<span id="_CPPv3N3URI8Template7VarType6STRINGE"></span><span id="_CPPv2N3URI8Template7VarType6STRINGE"></span><span class="target" id="namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190a63b588d5559f64f89a416e656880b949"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">STRING</span></code><a class="headerlink" href="#_CPPv4N3URI8Template7VarType6STRINGE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>value is a string </p>
+</dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N3URI8Template7VarType4LISTE">
+<span id="_CPPv3N3URI8Template7VarType4LISTE"></span><span id="_CPPv2N3URI8Template7VarType4LISTE"></span><span class="target" id="namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190a298cb25408234de02baf2085803a464a"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">LIST</span></code><a class="headerlink" href="#_CPPv4N3URI8Template7VarType4LISTE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>value is a list of strings </p>
+</dd></dl>
+<dl class="cpp enumerator">
+<dt id="_CPPv4N3URI8Template7VarType4DICTE">
+<span id="_CPPv3N3URI8Template7VarType4DICTE"></span><span id="_CPPv2N3URI8Template7VarType4DICTE"></span><span class="target" id="namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190ad7f73f951e7f6c4ed5e17c4204f4032e"></span><em class="property"><span class="pre">enumerator</span> </em><code class="sig-name descname"><span class="pre">DICT</span></code><a class="headerlink" href="#_CPPv4N3URI8Template7VarType4DICTE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>value is an associative dictionary of strings </p>
+</dd></dl>
+</dd></dl>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Function URI::Template::ExpandExpression</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Enum PartType</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; Apache-2.0
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/api/enum_namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Enum VarType</a><ul>
+<li><a class="reference internal" href="#enum-documentation">Enum Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

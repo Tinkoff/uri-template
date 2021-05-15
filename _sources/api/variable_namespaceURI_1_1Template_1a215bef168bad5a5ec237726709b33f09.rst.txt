@@ -1,0 +1,13 @@
+.. _exhale_variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09:
+
+Variable URI::Template::NOOP_MODIFIER
+=====================================
+
+- Defined in :ref:`file_uri-template_Modifier.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: URI::Template::NOOP_MODIFIER

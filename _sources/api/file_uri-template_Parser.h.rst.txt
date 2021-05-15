@@ -1,0 +1,50 @@
+
+.. _file_uri-template_Parser.h:
+
+File Parser.h
+=============
+
+|exhale_lsh| :ref:`Parent directory <dir_uri-template>` (``uri-template``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+Definition (``uri-template/Parser.h``)
+--------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_uri-template_Parser.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``Template.h`` (:ref:`file_uri-template_Template.h`)
+
+
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI`
+
+- :ref:`namespace_URI__Template`
+
+
+Functions
+---------
+
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a42a37e74c1dfc658d71da4bc57948079`
+
+- :ref:`exhale_function_namespaceURI_1_1Template_1a141f5b8ee4c5dd211f76978a8ad2c986`
+

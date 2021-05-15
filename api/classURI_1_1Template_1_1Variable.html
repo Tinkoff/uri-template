@@ -1,0 +1,369 @@
+<!doctype html>
+<html class="no-js">
+  <head><meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <meta name="color-scheme" content="light dark"><link rel="index" title="Index" href="../genindex.html" /><link rel="search" title="Search" href="../search.html" /><link rel="next" title="Class VarValue" href="classURI_1_1Template_1_1VarValue.html" /><link rel="prev" title="Class Template" href="classURI_1_1Template_1_1Template.html" />
+
+    <meta name="generator" content="sphinx-3.5.4, furo 2021.04.11.beta34"/>
+        <title>Class Variable - uri-template</title>
+      <link rel="stylesheet" href="../_static/styles/furo.css?digest=59ab60ac09ea94ccfe6deddff6d715cce948a6fc">
+    <link rel="stylesheet" href="../_static/pygments.css">
+    <link media="(prefers-color-scheme: dark)" rel="stylesheet" href="../_static/pygments_dark.css">
+    
+
+
+<style>
+  :root {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-api-overall: #cccccc;
+  --color-api-keyword: #e62569;
+  --color-api-name: #8ee22c;
+  --color-brand-content: #67d8ef;
+  
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+    }
+  }
+
+  /* For allowing end-user-specific overrides */
+  .override-light {
+    --color-code-background: #f8f8f8;
+  --color-code-foreground: black;
+  --color-api-overall: #cccccc;
+  --color-api-keyword: #e62569;
+  --color-api-name: #8ee22c;
+  --color-brand-content: #67d8ef;
+  
+  }
+  .override-dark {
+    --color-code-background: #202020;
+  --color-code-foreground: #d0d0d0;
+  
+  }
+</style><link rel="stylesheet" type="text/css" href="../_static/collapsible-lists/css/tree_view.css" />
+    <link rel="stylesheet" href="../_static/styles/furo-extensions.css?digest=d391b54134226e4196576da3bdb6dddb7e05ba2b"></head>
+  <body dir="">
+    
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+  <symbol id="svg-toc" viewBox="0 0 24 24">
+    <title>Contents</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke-width="1.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round">
+      <path stroke="none" d="M0 0h24v24H0z"/>
+      <line x1="4" y1="6" x2="20" y2="6" />
+      <line x1="10" y1="12" x2="20" y2="12" />
+      <line x1="6" y1="18" x2="20" y2="18" />
+    </svg>
+  </symbol>
+  <symbol id="svg-menu" viewBox="0 0 24 24">
+    <title>Menu</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-menu">
+      <line x1="3" y1="12" x2="21" y2="12"></line>
+      <line x1="3" y1="6" x2="21" y2="6"></line>
+      <line x1="3" y1="18" x2="21" y2="18"></line>
+    </svg>
+  </symbol>
+  <symbol id="svg-arrow-right" viewBox="0 0 24 24">
+    <title>Expand</title>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+      class="feather feather-chevron-right">
+      <polyline points="9 18 15 12 9 6"></polyline>
+    </svg>
+  </symbol>
+</svg>
+
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation">
+<input type="checkbox" class="sidebar-toggle" name="__toc" id="__toc">
+<label class="overlay sidebar-overlay" for="__navigation"></label>
+<label class="overlay toc-overlay" for="__toc"></label>
+
+
+
+<div class="page">
+  <header class="mobile-header">
+    <div class="header-left">
+      <label class="nav-overlay-icon" for="__navigation">
+        <i class="icon"><svg><use href="#svg-menu"></use></svg></i>
+      </label>
+    </div>
+    <div class="header-center">
+      <a href="../index.html"><div class="brand">uri-template</div></a>
+    </div>
+    <div class="header-right">
+      <label class="toc-overlay-icon toc-header-icon" for="__toc">
+        <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+      </label>
+    </div>
+  </header>
+  <aside class="sidebar-drawer">
+    <div class="sidebar-container">
+      
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="../index.html">
+  
+  
+  <span class="sidebar-brand-text">uri-template</span>
+  
+</a><form class="sidebar-search-container" method="get" action="../search.html">
+  <input class="sidebar-search" placeholder=Search name="q">
+  <input type="hidden" name="check_keywords" value="yes">
+  <input type="hidden" name="area" value="default">
+</form><div class="sidebar-scroll"><div class="sidebar-tree">
+  <ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="unabridged_api.html">Reference</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label for="toctree-checkbox-1"><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="namespace_URI.html">Namespace URI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_URI__Template.html">Namespace URI::Template</a></li>
+<li class="toctree-l2"><a class="reference internal" href="namespace_URI__Template__detail.html">Namespace URI::Template::detail</a></li>
+<li class="toctree-l2"><a class="reference internal" href="structURI_1_1Template_1_1detail_1_1typelist.html">Template Struct typelist</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Expression.html">Class Expression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Literal.html">Class Literal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Match.html">Class Match</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1ModExplode.html">Class ModExplode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Modifier.html">Class Modifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1ModLength.html">Class ModLength</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1ModNoop.html">Class ModNoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Operator.html">Class Operator</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpFragment.html">Class OpFragment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpLabel.html">Class OpLabel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpNoop.html">Class OpNoop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpPath.html">Class OpPath</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpPathParam.html">Class OpPathParam</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpQuery.html">Class OpQuery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpQueryContinue.html">Class OpQueryContinue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1OpReservedChars.html">Class OpReservedChars</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Part.html">Class Part</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1Template.html">Class Template</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">Class Variable</a></li>
+<li class="toctree-l2"><a class="reference internal" href="classURI_1_1Template_1_1VarValue.html">Class VarValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592.html">Enum ModifierType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1a2e389ee539108ed58a1328fac30e245d.html">Enum OperatorType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313.html">Enum PartType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="enum_namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190.html">Enum VarType</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75.html">Function URI::Template::ExpandExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a145a6da5f2a133eef499df5e3f6cace8.html">Function URI::Template::ExpandTemplate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a35aefbc8e829ed6bc11c96a6e7ffd9fc.html">Function URI::Template::MatchExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a4984f240c045e014e0a986fa774c5e2e.html">Function URI::Template::MatchLiteral</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1ade74ff3351fa7a0593d08ed1e30eebe6.html">Function URI::Template::MatchURI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a4f025af69214626ac02c078a3268b223.html">Function URI::Template::MatchVarValue</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1aeb06c601e8854612917d07d41b4979e5.html">Function URI::Template::operator&lt;&lt;</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a42a37e74c1dfc658d71da4bc57948079.html">Function URI::Template::ParseExpression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a141f5b8ee4c5dd211f76978a8ad2c986.html">Function URI::Template::ParseTemplate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="function_namespaceURI_1_1Template_1a48519beb1f721f5bcaaf9aa1dbb80788.html">Function URI::Template::PctEncode</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1ad13e1a394707c6d412b7a6bdf4d1526c.html">Variable URI::Template::KNOWN_MODIFIERS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1aba0e009c74b1bcaef6cbbaa2d018c5f9.html">Variable URI::Template::KNOWN_OPERATORS</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09.html">Variable URI::Template::NOOP_MODIFIER</a></li>
+<li class="toctree-l2"><a class="reference internal" href="variable_namespaceURI_1_1Template_1a6c30aadaf5633f032ded6905cf6a0f7a.html">Variable URI::Template::NOOP_OPERATOR</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="class_view_hierarchy.html">Class Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="file_view_hierarchy.html">File Hierarchy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../genindex.html">Index</a></li>
+</ul>
+
+</div>
+</div>
+      </div>
+      
+    </div>
+  </aside>
+  <main class="main">
+    <div class="content">
+      <article role="main">
+        <label class="toc-overlay-icon toc-content-icon" for="__toc">
+          <i class="icon"><svg><use href="#svg-toc"></use></svg></i>
+        </label>
+        <div class="section" id="class-variable">
+<span id="exhale-class-classuri-1-1template-1-1variable"></span><h1>Class Variable<a class="headerlink" href="#class-variable" title="Permalink to this headline">¶</a></h1>
+<ul class="simple">
+<li><p>Defined in <a class="reference internal" href="file_uri-template_Variable.h.html#file-uri-template-variable-h"><span class="std std-ref">File Variable.h</span></a></p></li>
+</ul>
+<div class="section" id="class-documentation">
+<h2>Class Documentation<a class="headerlink" href="#class-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="cpp class">
+<dt id="_CPPv4N3URI8Template8VariableE">
+<span id="_CPPv3N3URI8Template8VariableE"></span><span id="_CPPv2N3URI8Template8VariableE"></span><span id="URI::Template::Variable"></span><span class="target" id="classURI_1_1Template_1_1Variable"></span><em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">URI</span><span class="pre">::</span><span class="pre">Template</span><code class="sig-prename descclassname"><span class="pre">::</span></code></code><code class="sig-name descname"><span class="pre">Variable</span></code><a class="headerlink" href="#_CPPv4N3URI8Template8VariableE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>URI-template variable definition. </p>
+<p>This class represent a variable defined in the template. After the operator (if any), each expression in the template contains a list of one or more comma-separated variable specifiers which are handled as instances of this class. </p>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-functions">Public Functions</p>
+<dl class="cpp function">
+<dt id="_CPPv4N3URI8Template8Variable8VariableERRNSt6stringERRNSt10shared_ptrI8ModifierEEj">
+<span id="_CPPv3N3URI8Template8Variable8VariableERRNSt6stringERRNSt10shared_ptrI8ModifierEEj"></span><span id="_CPPv2N3URI8Template8Variable8VariableERRNSt6stringERRNSt10shared_ptrI8ModifierEEj"></span><span id="URI::Template::Variable::Variable__ssRR.std::shared_ptr:Modifier:RR.unsigned"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a1e98e3abef8cbe15ff02d25847e237c5"></span><code class="sig-name descname"><span class="pre">Variable</span></code><span class="sig-paren">(</span><span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">name</span></em>, <span class="pre">std</span><span class="pre">::</span><span class="pre">shared_ptr</span><span class="pre">&lt;</span><a class="reference internal" href="classURI_1_1Template_1_1Modifier.html#_CPPv4N3URI8Template8ModifierE" title="URI::Template::Modifier"><span class="pre">Modifier</span></a><span class="pre">&gt;</span> <span class="pre">&amp;</span><span class="pre">&amp;</span><em><span class="pre">modifier</span></em>, <span class="pre">unsigned</span> <em><span class="pre">length</span></em><span class="sig-paren">)</span><a class="headerlink" href="#_CPPv4N3URI8Template8Variable8VariableERRNSt6stringERRNSt10shared_ptrI8ModifierEEj" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Parametrized constructor. </p>
+<p>Creates a variable with known name and modifiers.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>[in] name</strong> – Name of the variable. </p></li>
+<li><p><strong>[in] modifier</strong> – <a class="reference internal" href="classURI_1_1Template_1_1Modifier.html#classURI_1_1Template_1_1Modifier"><span class="std std-ref">Modifier</span></a> for the variable. nullptr is equivalent to <a class="reference internal" href="variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09.html#namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09"><span class="std std-ref">Template::NOOP_MODIFIER</span></a>. </p></li>
+<li><p><strong>[in] length</strong> – Prefix length if <code class="docutils literal notranslate"><span class="pre">modifier</span></code> is <a class="reference internal" href="enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592.html#namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592aaddeac40406177897b3fccba88558f1c"><span class="std std-ref">ModifierType::LENGTH</span></a>. </p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N3URI8Template8Variable8VariableERK8Variable">
+<span id="_CPPv3N3URI8Template8Variable8VariableERK8Variable"></span><span id="_CPPv2N3URI8Template8Variable8VariableERK8Variable"></span><span id="URI::Template::Variable::Variable__VariableCR"></span><span class="target" id="classURI_1_1Template_1_1Variable_1ab77ea0ef9ebb6b9c787f0fb48591be25"></span><code class="sig-name descname"><span class="pre">Variable</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3URI8Template8Variable8VariableERK8Variable" title="URI::Template::Variable::Variable"><span class="pre">Variable</span></a><span class="pre">&amp;</span><span class="sig-paren">)</span> <span class="pre">=</span> <span class="pre">default</span><a class="headerlink" href="#_CPPv4N3URI8Template8Variable8VariableERK8Variable" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Copy constructor. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N3URI8Template8VariableaSERK8Variable">
+<span id="_CPPv3N3URI8Template8VariableaSERK8Variable"></span><span id="_CPPv2N3URI8Template8VariableaSERK8Variable"></span><span id="URI::Template::Variable::assign-operator__VariableCR"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a90eefe445571c6da92a8f042a73de4d1"></span><a class="reference internal" href="#_CPPv4N3URI8Template8VariableE" title="URI::Template::Variable"><span class="pre">Variable</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3URI8Template8VariableE" title="URI::Template::Variable"><span class="pre">Variable</span></a><span class="pre">&amp;</span><span class="sig-paren">)</span> <span class="pre">=</span> <span class="pre">default</span><a class="headerlink" href="#_CPPv4N3URI8Template8VariableaSERK8Variable" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Copy assignment. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N3URI8Template8Variable8VariableERR8Variable">
+<span id="_CPPv3N3URI8Template8Variable8VariableERR8Variable"></span><span id="_CPPv2N3URI8Template8Variable8VariableERR8Variable"></span><span id="URI::Template::Variable::Variable__VariableRR"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a8513392a2a7f25cc41a4f9148adff48c"></span><code class="sig-name descname"><span class="pre">Variable</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3URI8Template8Variable8VariableERR8Variable" title="URI::Template::Variable::Variable"><span class="pre">Variable</span></a><span class="pre">&amp;</span><span class="pre">&amp;</span><span class="sig-paren">)</span> <em class="property"><span class="pre">noexcept</span></em> <span class="pre">=</span> <span class="pre">default</span><a class="headerlink" href="#_CPPv4N3URI8Template8Variable8VariableERR8Variable" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Move constructor. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N3URI8Template8VariableaSERR8Variable">
+<span id="_CPPv3N3URI8Template8VariableaSERR8Variable"></span><span id="_CPPv2N3URI8Template8VariableaSERR8Variable"></span><span id="URI::Template::Variable::assign-operator__VariableRR"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a8efdedd6e512104325d5d74ef974eb00"></span><a class="reference internal" href="#_CPPv4N3URI8Template8VariableE" title="URI::Template::Variable"><span class="pre">Variable</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">operator=</span></code><span class="sig-paren">(</span><a class="reference internal" href="#_CPPv4N3URI8Template8VariableE" title="URI::Template::Variable"><span class="pre">Variable</span></a><span class="pre">&amp;</span><span class="pre">&amp;</span><span class="sig-paren">)</span> <em class="property"><span class="pre">noexcept</span></em> <span class="pre">=</span> <span class="pre">default</span><a class="headerlink" href="#_CPPv4N3URI8Template8VariableaSERR8Variable" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Move assignment. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4N3URI8Template8VariableD0Ev">
+<span id="_CPPv3N3URI8Template8VariableD0Ev"></span><span id="_CPPv2N3URI8Template8VariableD0Ev"></span><span id="URI::Template::Variable::~Variable"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a73de320e7d467c9cd71d19b109378d25"></span><code class="sig-name descname"><span class="pre">~Variable</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <span class="pre">=</span> <span class="pre">default</span><a class="headerlink" href="#_CPPv4N3URI8Template8VariableD0Ev" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Destructor. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8Variable10IsPrefixedEv">
+<span id="_CPPv3NK3URI8Template8Variable10IsPrefixedEv"></span><span id="_CPPv2NK3URI8Template8Variable10IsPrefixedEv"></span><span id="URI::Template::Variable::IsPrefixedC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a93c640a0de64bca3d43d595a9543e9a1"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">IsPrefixed</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8Variable10IsPrefixedEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Check if the variable has <a class="reference internal" href="enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592.html#namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592aaddeac40406177897b3fccba88558f1c"><span class="std std-ref">ModifierType::LENGTH</span></a> modifier. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8Variable10IsExplodedEv">
+<span id="_CPPv3NK3URI8Template8Variable10IsExplodedEv"></span><span id="_CPPv2NK3URI8Template8Variable10IsExplodedEv"></span><span id="URI::Template::Variable::IsExplodedC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a90ff0200c1ad2075b5f8b6bac0f8f5a3"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">IsExploded</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8Variable10IsExplodedEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Check if the variable has <a class="reference internal" href="enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592.html#namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592a089186b74bd71f06f84fd4df306d74e4"><span class="std std-ref">ModifierType::EXPLODE</span></a> modifier. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8Variable4NameEv">
+<span id="_CPPv3NK3URI8Template8Variable4NameEv"></span><span id="_CPPv2NK3URI8Template8Variable4NameEv"></span><span id="URI::Template::Variable::NameC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a3c22d74915df70e459240e50d7e1f34f"></span><em class="property"><span class="pre">const</span></em> <span class="pre">std</span><span class="pre">::</span><span class="pre">string</span> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">Name</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8Variable4NameEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Get the variable name. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8Variable3ModEv">
+<span id="_CPPv3NK3URI8Template8Variable3ModEv"></span><span id="_CPPv2NK3URI8Template8Variable3ModEv"></span><span id="URI::Template::Variable::ModC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1ab45f2fd4fa1f98be34140cc4fa0cb01c"></span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="classURI_1_1Template_1_1Modifier.html#_CPPv4N3URI8Template8ModifierE" title="URI::Template::Modifier"><span class="pre">Modifier</span></a> <span class="pre">&amp;</span><code class="sig-name descname"><span class="pre">Mod</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8Variable3ModEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Get the variable modifier. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8Variable6LengthEv">
+<span id="_CPPv3NK3URI8Template8Variable6LengthEv"></span><span id="_CPPv2NK3URI8Template8Variable6LengthEv"></span><span id="URI::Template::Variable::LengthC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a4023d89b7ebb4bee0f23ba9b10870ca4"></span><span class="pre">unsigned</span> <code class="sig-name descname"><span class="pre">Length</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8Variable6LengthEv" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Get the variable prefix length. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8VariableeqERK8Variable">
+<span id="_CPPv3NK3URI8Template8VariableeqERK8Variable"></span><span id="_CPPv2NK3URI8Template8VariableeqERK8Variable"></span><span id="URI::Template::Variable::eq-operator__VariableCRC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a80274a2fc5ae6691c5363ade96b28296"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">operator==</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3URI8Template8VariableE" title="URI::Template::Variable"><span class="pre">Variable</span></a> <span class="pre">&amp;</span><em><span class="pre">rhs</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8VariableeqERK8Variable" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Compares two variables. </p>
+</dd></dl>
+<dl class="cpp function">
+<dt id="_CPPv4NK3URI8Template8VariableneERK8Variable">
+<span id="_CPPv3NK3URI8Template8VariableneERK8Variable"></span><span id="_CPPv2NK3URI8Template8VariableneERK8Variable"></span><span id="URI::Template::Variable::neq-operator__VariableCRC"></span><span class="target" id="classURI_1_1Template_1_1Variable_1addb326de34645a21fcb9a88c9772bca7"></span><span class="pre">bool</span> <code class="sig-name descname"><span class="pre">operator!=</span></code><span class="sig-paren">(</span><em class="property"><span class="pre">const</span></em> <a class="reference internal" href="#_CPPv4N3URI8Template8VariableE" title="URI::Template::Variable"><span class="pre">Variable</span></a> <span class="pre">&amp;</span><em><span class="pre">rhs</span></em><span class="sig-paren">)</span> <em class="property"><span class="pre">const</span></em><a class="headerlink" href="#_CPPv4NK3URI8Template8VariableneERK8Variable" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Compares two variables. </p>
+</dd></dl>
+</div>
+<div class="breathe-sectiondef docutils container">
+<p class="breathe-sectiondef-title rubric" id="breathe-section-title-public-static-attributes">Public Static Attributes</p>
+<dl class="cpp var">
+<dt id="_CPPv4N3URI8Template8Variable10kNameCharsE">
+<span id="_CPPv3N3URI8Template8Variable10kNameCharsE"></span><span id="_CPPv2N3URI8Template8Variable10kNameCharsE"></span><span id="URI::Template::Variable::kNameChars__std::unordered_set:c:C"></span><span class="target" id="classURI_1_1Template_1_1Variable_1ae5068328dd02ba306448e3b533dcfed0"></span><em class="property"><span class="pre">static</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">std</span><span class="pre">::</span><span class="pre">unordered_set</span><span class="pre">&lt;</span><span class="pre">char</span><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">kNameChars</span></code><a class="headerlink" href="#_CPPv4N3URI8Template8Variable10kNameCharsE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Collection of allowed characters for variable name: ALPHA / DIGIT / “_” / pct-encoded / “.”. </p>
+</dd></dl>
+<dl class="cpp var">
+<dt id="_CPPv4N3URI8Template8Variable11kValueCharsE">
+<span id="_CPPv3N3URI8Template8Variable11kValueCharsE"></span><span id="_CPPv2N3URI8Template8Variable11kValueCharsE"></span><span id="URI::Template::Variable::kValueChars__std::unordered_set:c:C"></span><span class="target" id="classURI_1_1Template_1_1Variable_1a7829e36b3ee37381102163b01c42c777"></span><em class="property"><span class="pre">static</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">std</span><span class="pre">::</span><span class="pre">unordered_set</span><span class="pre">&lt;</span><span class="pre">char</span><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">kValueChars</span></code><a class="headerlink" href="#_CPPv4N3URI8Template8Variable11kValueCharsE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Collection of unreserved characters allowed for variable value: ALPHA / DIGIT / “-” / “.” / “_” / “~”/ “%” / “,”. </p>
+</dd></dl>
+<dl class="cpp var">
+<dt id="_CPPv4N3URI8Template8Variable14kReservedCharsE">
+<span id="_CPPv3N3URI8Template8Variable14kReservedCharsE"></span><span id="_CPPv2N3URI8Template8Variable14kReservedCharsE"></span><span id="URI::Template::Variable::kReservedChars__std::unordered_set:c:C"></span><span class="target" id="classURI_1_1Template_1_1Variable_1add21b1dce801a97d9a32a30902d7286e"></span><em class="property"><span class="pre">static</span></em> <em class="property"><span class="pre">const</span></em> <span class="pre">std</span><span class="pre">::</span><span class="pre">unordered_set</span><span class="pre">&lt;</span><span class="pre">char</span><span class="pre">&gt;</span> <code class="sig-name descname"><span class="pre">kReservedChars</span></code><a class="headerlink" href="#_CPPv4N3URI8Template8Variable14kReservedCharsE" title="Permalink to this definition">¶</a><br/></dt>
+<dd><p>Collection of reserved characters allowed for variable value: “:” / “/” / “?” / “#” / “[” / “]” / “@” / “!” / “$” / “&amp;” / “’” / “(” / “)” / “*” / “+” / “,” / “;” / “=”. </p>
+</dd></dl>
+</div>
+</dd></dl>
+</div>
+</div>
+
+      </article>
+      <footer>
+        
+        <div class="related-pages">
+          <a class="next-page" href="classURI_1_1Template_1_1VarValue.html">
+              <div class="page-info">
+                <div class="context">
+                  <span>Next</span>
+                </div>
+                <div class="title">Class VarValue</div>
+              </div>
+              <svg><use href="#svg-arrow-right"></use></svg>
+            </a>
+          <a class="prev-page" href="classURI_1_1Template_1_1Template.html">
+              <svg><use href="#svg-arrow-right"></use></svg>
+              <div class="page-info">
+                <div class="context">
+                  <span>Previous</span>
+                </div>
+                
+                <div class="title">Class Template</div>
+                
+              </div>
+            </a>
+        </div>
+
+        <div class="related-information">
+              Copyright &#169; Apache-2.0
+            |
+            Built with <a href="https://www.sphinx-doc.org/">Sphinx</a>
+              and
+              <a class="muted-link" href="https://pradyunsg.me">@pradyunsg</a>'s
+              <a href="https://github.com/pradyunsg/furo">Furo theme</a>.
+            |
+            <a class="muted-link" href="../_sources/api/classURI_1_1Template_1_1Variable.rst.txt"
+               rel="nofollow">
+              Show Source
+            </a>
+        </div>
+        
+      </footer>
+    </div>
+    <aside class="toc-drawer">
+      
+      
+      <div class="toc-sticky toc-scroll">
+        <div class="toc-title-container">
+          <span class="toc-title">
+            Contents
+          </span>
+        </div>
+        <div class="toc-tree-container">
+          <div class="toc-tree">
+            <ul>
+<li><a class="reference internal" href="#">Class Variable</a><ul>
+<li><a class="reference internal" href="#class-documentation">Class Documentation</a></li>
+</ul>
+</li>
+</ul>
+
+          </div>
+        </div>
+      </div>
+      
+      
+    </aside>
+  </main>
+</div>
+    <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/collapsible-lists/js/CollapsibleLists.compressed.js"></script>
+    <script src="../_static/collapsible-lists/js/apply-collapsible-lists.js"></script>
+    <script src="../_static/scripts/main.js?digest=e931d09b2a40c1bb82b542effe772014573baf67"></script></body>
+</html>

@@ -1,0 +1,13 @@
+.. _exhale_variable_namespaceURI_1_1Template_1aba0e009c74b1bcaef6cbbaa2d018c5f9:
+
+Variable URI::Template::KNOWN_OPERATORS
+=======================================
+
+- Defined in :ref:`file_uri-template_Operator.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: URI::Template::KNOWN_OPERATORS

@@ -1,0 +1,58 @@
+:orphan:
+
+
+Reference
+=========
+
+Directories
+***********
+
+
+.. toctree::
+   :maxdepth: 1
+
+   dir_uri-template.rst
+
+Files
+*****
+
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Expander.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Matcher.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Modifier.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Operator.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Parser.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Template.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_uri-template.h.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   file_uri-template_Variable.h.rst

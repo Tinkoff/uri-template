@@ -1,0 +1,16 @@
+.. _exhale_class_classURI_1_1Template_1_1Literal:
+
+Class Literal
+=============
+
+- Defined in :ref:`file_uri-template_Template.h`
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::Literal
+   :members:
+   :protected-members:
+   :undoc-members:

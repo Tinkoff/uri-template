@@ -1,0 +1,13 @@
+.. _exhale_enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592:
+
+Enum ModifierType
+=================
+
+- Defined in :ref:`file_uri-template_Modifier.h`
+
+
+Enum Documentation
+------------------
+
+
+.. doxygenenum:: URI::Template::ModifierType

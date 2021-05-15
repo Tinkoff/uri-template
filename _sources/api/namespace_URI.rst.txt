@@ -1,0 +1,13 @@
+
+.. _namespace_URI:
+
+Namespace URI
+=============
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI__Template`

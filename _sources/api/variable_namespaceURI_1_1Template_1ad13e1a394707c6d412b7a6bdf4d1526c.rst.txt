@@ -1,0 +1,13 @@
+.. _exhale_variable_namespaceURI_1_1Template_1ad13e1a394707c6d412b7a6bdf4d1526c:
+
+Variable URI::Template::KNOWN_MODIFIERS
+=======================================
+
+- Defined in :ref:`file_uri-template_Modifier.h`
+
+
+Variable Documentation
+----------------------
+
+
+.. doxygenvariable:: URI::Template::KNOWN_MODIFIERS

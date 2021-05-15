@@ -1,0 +1,88 @@
+
+.. _file_uri-template_Operator.h:
+
+File Operator.h
+===============
+
+|exhale_lsh| :ref:`Parent directory <dir_uri-template>` (``uri-template``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+Definition (``uri-template/Operator.h``)
+----------------------------------------
+
+
+.. toctree::
+   :maxdepth: 1
+
+   program_listing_file_uri-template_Operator.h.rst
+
+
+
+
+
+Includes
+--------
+
+
+- ``memory``
+
+- ``vector``
+
+
+
+Included By
+-----------
+
+
+- :ref:`file_uri-template_Template.h`
+
+
+
+
+Namespaces
+----------
+
+
+- :ref:`namespace_URI`
+
+- :ref:`namespace_URI__Template`
+
+
+Classes
+-------
+
+
+- :ref:`exhale_class_classURI_1_1Template_1_1Operator`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpFragment`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpLabel`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpNoop`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpPath`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpPathParam`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpQuery`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpQueryContinue`
+
+- :ref:`exhale_class_classURI_1_1Template_1_1OpReservedChars`
+
+
+Enums
+-----
+
+
+- :ref:`exhale_enum_namespaceURI_1_1Template_1a2e389ee539108ed58a1328fac30e245d`
+
+
+Variables
+---------
+
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1aba0e009c74b1bcaef6cbbaa2d018c5f9`
+
+- :ref:`exhale_variable_namespaceURI_1_1Template_1a6c30aadaf5633f032ded6905cf6a0f7a`
+

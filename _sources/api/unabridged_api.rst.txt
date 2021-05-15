@@ -1,0 +1,233 @@
+
+Reference
+---------
+
+Namespaces
+**********
+
+
+.. toctree::
+   :maxdepth: 1
+
+   namespace_URI.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   namespace_URI__Template.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   namespace_URI__Template__detail.rst
+
+Classes and Structs
+*******************
+
+
+.. toctree::
+   :maxdepth: 1
+
+   structURI_1_1Template_1_1detail_1_1typelist.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Expression.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Literal.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Match.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1ModExplode.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Modifier.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1ModLength.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1ModNoop.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Operator.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpFragment.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpLabel.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpNoop.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpPath.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpPathParam.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpQuery.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpQueryContinue.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1OpReservedChars.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Part.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Template.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1Variable.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   classURI_1_1Template_1_1VarValue.rst
+
+Enums
+*****
+
+
+.. toctree::
+   :maxdepth: 1
+
+   enum_namespaceURI_1_1Template_1ab913833fe088204594b6e650721af592.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   enum_namespaceURI_1_1Template_1a2e389ee539108ed58a1328fac30e245d.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   enum_namespaceURI_1_1Template_1a5429baa3dbd180e316910409fe473313.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   enum_namespaceURI_1_1Template_1ab39bdc27bae1b53446165d4019bb6190.rst
+
+Functions
+*********
+
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a0a45f173b8500a75e0846bbf9be99a75.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a145a6da5f2a133eef499df5e3f6cace8.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a35aefbc8e829ed6bc11c96a6e7ffd9fc.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a4984f240c045e014e0a986fa774c5e2e.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1ade74ff3351fa7a0593d08ed1e30eebe6.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a4f025af69214626ac02c078a3268b223.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1aeb06c601e8854612917d07d41b4979e5.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a42a37e74c1dfc658d71da4bc57948079.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a141f5b8ee4c5dd211f76978a8ad2c986.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   function_namespaceURI_1_1Template_1a48519beb1f721f5bcaaf9aa1dbb80788.rst
+
+Variables
+*********
+
+
+.. toctree::
+   :maxdepth: 1
+
+   variable_namespaceURI_1_1Template_1ad13e1a394707c6d412b7a6bdf4d1526c.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   variable_namespaceURI_1_1Template_1aba0e009c74b1bcaef6cbbaa2d018c5f9.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   variable_namespaceURI_1_1Template_1a215bef168bad5a5ec237726709b33f09.rst
+
+.. toctree::
+   :maxdepth: 1
+
+   variable_namespaceURI_1_1Template_1a6c30aadaf5633f032ded6905cf6a0f7a.rst

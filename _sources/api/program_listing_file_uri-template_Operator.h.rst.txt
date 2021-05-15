@@ -1,0 +1,238 @@
+
+.. _program_listing_file_uri-template_Operator.h:
+
+Program Listing for File Operator.h
+===================================
+
+|exhale_lsh| :ref:`Return to documentation for file <file_uri-template_Operator.h>` (``uri-template/Operator.h``)
+
+.. |exhale_lsh| unicode:: U+021B0 .. UPWARDS ARROW WITH TIP LEFTWARDS
+
+.. code-block:: cpp
+
+   #pragma once
+   
+   #include <memory>
+   #include <vector>
+   
+   namespace URI {
+   namespace Template {
+   
+   enum class OperatorType
+   {
+       NONE, 
+       RESERVED_CHARS, 
+       FRAGMENT, 
+       LABEL, 
+       PATH, 
+       PATH_PARAMETER, 
+       QUERY, 
+       QUERY_CONTINUE 
+   };
+   
+   class Operator
+   {
+   public:
+       static const char kNoCharacter; 
+   
+       virtual ~Operator() = default;
+   
+       virtual OperatorType Type() const = 0;
+       virtual char Start() const = 0;
+       virtual char First() const = 0;
+       virtual char Separator() const = 0;
+       virtual bool Named() const = 0;
+       virtual bool EmptyEq() const = 0;
+       virtual bool Reserved() const = 0;
+       virtual bool StartExpanded() const = 0;
+   };
+   
+   class OpNoop: public Operator
+   {
+   public:
+       OpNoop() = default;
+       virtual ~OpNoop() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   class OpReservedChars: public OpNoop
+   {
+   public:
+       OpReservedChars() = default;
+       virtual ~OpReservedChars() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual bool Reserved() const override;
+   };
+   
+   class OpFragment: public Operator
+   {
+   public:
+       OpFragment() = default;
+       virtual ~OpFragment() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   class OpLabel: public Operator
+   {
+   public:
+       OpLabel() = default;
+       virtual ~OpLabel() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   class OpPath: public Operator
+   {
+   public:
+       OpPath() = default;
+       virtual ~OpPath() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   class OpPathParam: public Operator
+   {
+   public:
+       OpPathParam() = default;
+       virtual ~OpPathParam() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   class OpQuery: public Operator
+   {
+   public:
+       OpQuery() = default;
+       virtual ~OpQuery() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   class OpQueryContinue: public Operator
+   {
+   public:
+       OpQueryContinue() = default;
+       virtual ~OpQueryContinue() = default;
+   
+       virtual OperatorType Type() const override;
+   
+       virtual char Start() const override;
+   
+       virtual char First() const override;
+   
+       virtual char Separator() const override;
+   
+       virtual bool Named() const override;
+   
+       virtual bool EmptyEq() const override;
+   
+       virtual bool Reserved() const override;
+   
+       virtual bool StartExpanded() const override;
+   };
+   
+   inline const std::shared_ptr<Operator> NOOP_OPERATOR = std::make_shared<OpNoop>();
+   // clang-format off
+   inline const std::vector<std::shared_ptr<Operator>> KNOWN_OPERATORS = {
+       std::make_shared<OpReservedChars>(),
+       std::make_shared<OpFragment>(),
+       std::make_shared<OpLabel>(),
+       std::make_shared<OpPath>(),
+       std::make_shared<OpPathParam>(),
+       std::make_shared<OpQuery>(),
+       std::make_shared<OpQueryContinue>(),
+   };
+   // clang-format on
+   
+   } // namespace Template
+   } // namespace URI

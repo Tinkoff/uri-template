@@ -1,0 +1,18 @@
+
+File Hierarchy
+--------------
+
+
+.. raw:: html
+
+   <ul class="treeView" id="file-treeView">
+     <li>
+       <ul class="collapsibleList">
+         <li class="lastChild">Directory <a href="dir_uri-template.html#dir-uri-template">uri-template</a><ul><li>File <a href="file_uri-template_Expander.h.html#file-uri-template-Expander.h">Expander.h</a></li><li>File <a href="file_uri-template_Matcher.h.html#file-uri-template-Matcher.h">Matcher.h</a></li><li>File <a href="file_uri-template_Modifier.h.html#file-uri-template-Modifier.h">Modifier.h</a></li><li>File <a href="file_uri-template_Operator.h.html#file-uri-template-Operator.h">Operator.h</a></li><li>File <a href="file_uri-template_Parser.h.html#file-uri-template-Parser.h">Parser.h</a></li><li>File <a href="file_uri-template_Template.h.html#file-uri-template-Template.h">Template.h</a></li><li>File <a href="file_uri-template_uri-template.h.html#file-uri-template-uri-template.h">uri-template.h</a></li><li class="lastChild">File <a href="file_uri-template_Variable.h.html#file-uri-template-Variable.h">Variable.h</a></li></ul></li>
+       </ul>
+     </li><!-- only tree view element -->
+   </ul><!-- /treeView file-treeView -->
+
+.. end raw html for treeView
+
+

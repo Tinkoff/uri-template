@@ -1,0 +1,25 @@
+.. _exhale_class_classURI_1_1Template_1_1ModNoop:
+
+Class ModNoop
+=============
+
+- Defined in :ref:`file_uri-template_Modifier.h`
+
+
+Inheritance Relationships
+-------------------------
+
+Base Type
+*********
+
+- ``public URI::Template::Modifier`` (:ref:`exhale_class_classURI_1_1Template_1_1Modifier`)
+
+
+Class Documentation
+-------------------
+
+
+.. doxygenclass:: URI::Template::ModNoop
+   :members:
+   :protected-members:
+   :undoc-members:
