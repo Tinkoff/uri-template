@@ -1,3 +1,15 @@
+## 1.1.4 (2021-05-27)
+
+### Fixes
+
+* Fix macOS building
+
+### Misc
+
+* Add github actions
+* Update README
+
+
 ## 1.1.3 (2021-05-11)
 
 ### Fixes
