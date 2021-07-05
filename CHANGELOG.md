@@ -1,3 +1,10 @@
+## 1.2.0 (2021-07-05)
+
+### Features
+
+* Implement method String() to print raw template strings
+
+
 ## 1.1.4 (2021-05-27)
 
 ### Fixes

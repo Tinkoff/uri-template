@@ -52,12 +52,8 @@ public:
      */
     std::size_t Size() const;
 
-    /**
-     * Get remote target in format 'host:port'
-     *
-     * @returns A const reference to the literal string.
-     */
-    const std::string& String() const;
+    /// Get literal string.
+    const std::string& String() const noexcept;
 
     /// Compares the contents of two literals.
     bool operator==(const Literal& rhs) const;
@@ -110,6 +106,9 @@ public:
      * @returns A const reference to vector of variables.
      */
     const std::vector<Variable>& Vars() const;
+
+    /// Get the expression string.
+    std::string String() const noexcept;
 
     /// Compares two expressions.
     bool operator==(const Expression& rhs) const;
@@ -205,6 +204,15 @@ public:
     inline PartType Type() const
     {
         return type_;
+    }
+
+    /// Get the part string.
+    inline std::string String() const noexcept
+    {
+        if (std::holds_alternative<Literal>(part_)) {
+            return Get<Literal>().String();
+        }
+        return Get<Expression>().String();
     }
 
     /// Compares two parts.
@@ -305,6 +313,9 @@ public:
      * @returns A const reference to the part at specified location @p pos.
      */
     const Part& operator[](std::size_t pos) const;
+
+    /// Get the template string.
+    std::string String() const noexcept;
 
 private:
     std::vector<Part> parts_; ///< Collection of parts.

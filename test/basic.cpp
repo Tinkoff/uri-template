@@ -19,7 +19,7 @@ TEST(IsTemplated, Test)
     ASSERT_TRUE(URI::Template::ParseTemplate("{&val*}").IsTemplated());
 }
 
-TEST(LiteralCompare, Test)
+TEST(Literal, Test)
 {
     const auto literal1 = URI::Template::ParseTemplate("foo")[0].Get<URI::Template::Literal>();
     const auto literal2 = URI::Template::ParseTemplate("foo")[0].Get<URI::Template::Literal>();
@@ -27,6 +27,10 @@ TEST(LiteralCompare, Test)
 
     ASSERT_TRUE(literal1 == literal2);
     ASSERT_TRUE(literal1 != literal3);
+
+    ASSERT_EQ(literal1.String(), "foo");
+    ASSERT_EQ(literal2.String(), "foo");
+    ASSERT_EQ(literal3.String(), "bar");
 }
 
 TEST(ExpressionCompare, Test)
@@ -51,6 +55,41 @@ TEST(ExpressionCompare, Test)
     ASSERT_TRUE(expression1 != expression8);
     ASSERT_TRUE(expression1 != expression9);
     ASSERT_TRUE(expression1 != expression10);
+
+    ASSERT_EQ(expression1.String(), "{var}");
+    ASSERT_EQ(expression2.String(), "{var}");
+    ASSERT_EQ(expression3.String(), "{val}");
+    ASSERT_EQ(expression4.String(), "{/val}");
+    ASSERT_EQ(expression5.String(), "{+val}");
+    ASSERT_EQ(expression6.String(), "{.val}");
+    ASSERT_EQ(expression7.String(), "{;val}");
+    ASSERT_EQ(expression8.String(), "{?val}");
+    ASSERT_EQ(expression9.String(), "{&val}");
+    ASSERT_EQ(expression10.String(), "{#val}");
+}
+
+TEST(TemplateString, Test)
+{
+    ASSERT_EQ(URI::Template::ParseTemplate("{var}").String(), "{var}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{+var}").String(), "{+var}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{+path}/here").String(), "{+path}/here");
+    ASSERT_EQ(URI::Template::ParseTemplate("here?ref={+path}").String(), "here?ref={+path}");
+    ASSERT_EQ(URI::Template::ParseTemplate("map?{x,y}").String(), "map?{x,y}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{x,hello,y}").String(), "{x,hello,y}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{+path,x}/here").String(), "{+path,x}/here");
+    ASSERT_EQ(URI::Template::ParseTemplate("X{.x,y}").String(), "X{.x,y}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{;x,y,empty}").String(), "{;x,y,empty}");
+    ASSERT_EQ(URI::Template::ParseTemplate("?fixed=yes{&x}").String(), "?fixed=yes{&x}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{var:3}").String(), "{var:3}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{list*}").String(), "{list*}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{+path:6}/here").String(), "{+path:6}/here");
+    ASSERT_EQ(URI::Template::ParseTemplate("{#keys*}").String(), "{#keys*}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{/list*,path:4}").String(), "{/list*,path:4}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{;hello:5}").String(), "{;hello:5}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{?keys*}").String(), "{?keys*}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{;hello:5}").String(), "{;hello:5}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{;hello:5}").String(), "{;hello:5}");
+    ASSERT_EQ(URI::Template::ParseTemplate("{;hello:5}").String(), "{;hello:5}");
 }
 
 TEST(PartsSize, Test)
@@ -70,7 +109,7 @@ TEST(PartsCompare, Test)
     ASSERT_EQ(const_uri_template.Parts(), uri_template1.Parts());
 
     const auto uri_template2 = URI::Template::ParseTemplate("foo{var}bar");
-    ASSERT_EQ(uri_template1.Parts(), uri_template1.Parts());
+    ASSERT_EQ(uri_template1.Parts(), uri_template2.Parts());
 
     const auto uri_template3 = URI::Template::ParseTemplate("bar{var}bar");
     const auto uri_template4 = URI::Template::ParseTemplate("foo{var}foo");
