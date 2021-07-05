@@ -39,7 +39,7 @@ Program Listing for File Template.h
    
        std::size_t Size() const;
    
-       const std::string& String() const;
+       const std::string& String() const noexcept;
    
        bool operator==(const Literal& rhs) const;
        bool operator!=(const Literal& rhs) const;
@@ -63,6 +63,8 @@ Program Listing for File Template.h
        const Operator& Oper() const;
    
        const std::vector<Variable>& Vars() const;
+   
+       std::string String() const noexcept;
    
        bool operator==(const Expression& rhs) const;
        bool operator!=(const Expression& rhs) const;
@@ -117,6 +119,14 @@ Program Listing for File Template.h
            return type_;
        }
    
+       inline std::string String() const noexcept
+       {
+           if (std::holds_alternative<Literal>(part_)) {
+               return Get<Literal>().String();
+           }
+           return Get<Expression>().String();
+       }
+   
        inline bool operator==(const Part& rhs) const
        {
            return type_ == rhs.type_ && part_ == rhs.part_;
@@ -161,6 +171,8 @@ Program Listing for File Template.h
        Part& operator[](std::size_t pos);
    
        const Part& operator[](std::size_t pos) const;
+   
+       std::string String() const noexcept;
    
    private:
        std::vector<Part> parts_; 
