@@ -27,7 +27,7 @@ std::size_t URI::Template::Literal::Size() const
     return lit_string_.size();
 }
 
-const std::string& URI::Template::Literal::String() const
+const std::string& URI::Template::Literal::String() const noexcept
 {
     return lit_string_;
 }
@@ -59,6 +59,33 @@ const URI::Template::Operator& URI::Template::Expression::Oper() const
 const std::vector<URI::Template::Variable>& URI::Template::Expression::Vars() const
 {
     return var_list_;
+}
+
+std::string URI::Template::Expression::String() const noexcept
+{
+    std::string result = "{";
+
+    if (oper_->Type() != OperatorType::NONE) {
+        result += oper_->Start();
+    }
+    for (std::size_t i = 0; i < var_list_.size(); ++i) {
+        const auto& var = var_list_[i];
+
+        if (i == 0) {
+            result += var.Name();
+        } else {
+            result += "," + var.Name();
+        }
+
+        if (var.IsPrefixed()) {
+            result += ":" + std::to_string(var.Length());
+        } else if (var.IsExploded()) {
+            result += "*";
+        }
+    }
+
+    result += "}";
+    return result;
 }
 
 bool URI::Template::Expression::operator==(const Expression& rhs) const
@@ -102,4 +129,13 @@ URI::Template::Part& URI::Template::Template::operator[](std::size_t pos)
 const URI::Template::Part& URI::Template::Template::operator[](std::size_t pos) const
 {
     return parts_.at(pos);
+}
+
+std::string URI::Template::Template::String() const noexcept
+{
+    std::string result;
+    for (const auto& part : parts_) {
+        result += part.String();
+    }
+    return result;
 }
