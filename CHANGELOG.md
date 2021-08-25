@@ -1,3 +1,10 @@
+## 1.2.1 (2021-08-26)
+
+### Fixes
+
+* Fix cmake config targets file misspell
+
+
 ## 1.2.0 (2021-07-05)
 
 ### Features
