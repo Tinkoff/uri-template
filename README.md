@@ -89,7 +89,7 @@ Template expanded: http://example.com/search?q=cat&lang=en
 
 ## Detailed description
 
-For full API reference look here – https://tinkoffcreditsystems.github.io/uri-template/
+For full API reference look here – https://tinkoff.github.io/stream-client/
 
 ## How to use in your project
 
