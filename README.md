@@ -89,7 +89,7 @@ Template expanded: http://example.com/search?q=cat&lang=en
 
 ## Detailed description
 
-For full API reference look here – https://tinkoff.github.io/stream-client/
+For full API reference look here – https://tinkoff.github.io/uri-template/
 
 ## How to use in your project
 
