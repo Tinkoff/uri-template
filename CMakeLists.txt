@@ -141,7 +141,7 @@ if(URITEMPLATE_BUILD_TESTING)
         endif()
     endif()
 
-    add_subdirectory(test)
+    add_subdirectory(tests)
 endif()
 
 
