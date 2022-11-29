@@ -46,26 +46,27 @@ endif()
 
 option(URITEMPLATE_BUILD_TESTING "Build included unit-tests" OFF)
 option(URITEMPLATE_BUILD_DOCS "Build sphinx generated docs" OFF)
+option(URITEMPLATE_BUILD_EXAMPLE "Build example" OFF)
 
 
 ##############################################
 # Create target and set properties
 
-set(UCONFIG_INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
-set(UCONFIG_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
+set(URITEMPLATE_INC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/include)
+set(URITEMPLATE_SRC_DIR ${CMAKE_CURRENT_SOURCE_DIR}/src)
 
 
-set(UCONFIG_SOURCES ${UCONFIG_SRC_DIR}/Expander.cpp
-                    ${UCONFIG_SRC_DIR}/Matcher.cpp
-                    ${UCONFIG_SRC_DIR}/Modifier.cpp
-                    ${UCONFIG_SRC_DIR}/Operator.cpp
-                    ${UCONFIG_SRC_DIR}/Parser.cpp
-                    ${UCONFIG_SRC_DIR}/Template.cpp
-                    ${UCONFIG_SRC_DIR}/Variable.cpp
+set(URITEMPLATE_SOURCES ${URITEMPLATE_SRC_DIR}/Expander.cpp
+                        ${URITEMPLATE_SRC_DIR}/Matcher.cpp
+                        ${URITEMPLATE_SRC_DIR}/Modifier.cpp
+                        ${URITEMPLATE_SRC_DIR}/Operator.cpp
+                        ${URITEMPLATE_SRC_DIR}/Parser.cpp
+                        ${URITEMPLATE_SRC_DIR}/Template.cpp
+                        ${URITEMPLATE_SRC_DIR}/Variable.cpp
 )
 
 # liburi-template
-add_library(${PROJECT_NAME} ${UCONFIG_SOURCES})
+add_library(${PROJECT_NAME} ${URITEMPLATE_SOURCES})
 add_library(${PROJECT_NAME}::${PROJECT_NAME} ALIAS ${PROJECT_NAME})
 
 target_include_directories(${PROJECT_NAME}
@@ -94,7 +95,7 @@ install(TARGETS ${PROJECT_NAME}
 )
 
 ## Install headers
-install(DIRECTORY ${UCONFIG_INC_DIR}/${PROJECT_NAME}
+install(DIRECTORY ${URITEMPLATE_INC_DIR}/${PROJECT_NAME}
         DESTINATION ${CMAKE_INSTALL_INCLUDEDIR}
 )
 
@@ -150,4 +151,9 @@ endif()
 
 if(URITEMPLATE_BUILD_DOCS)
     add_subdirectory(docs)
+endif()
+
+if(URITEMPLATE_BUILD_EXAMPLE)
+    add_executable("Example" example/Example.cpp)
+    target_link_libraries("Example" ${PROJECT_NAME})
 endif()

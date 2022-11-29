@@ -1,2 +1,2 @@
 # ignore third_party code from clang-format checks
-include/uconfig/detail/*
+include/uri-template/detail/*

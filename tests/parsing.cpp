@@ -37,7 +37,8 @@ INSTANTIATE_TEST_CASE_P(
         TestParams{"/sparql{?query,default-graph-uri}", "", {/* not parsed */}},
         TestParams{"/sparql{?query){&default-graph-uri*}", "", {/* not parsed */}},
         TestParams{"/resolution{?x, y}" , "", {/* not parsed */}},
-        TestParams{"{var:3000000000000}" , "", {/* not parsed */}}
+        TestParams{"{var:3000000000000}" , "", {/* not parsed */}},
+        TestParams{"{+}", "", {/* not parsed */}}
     )
 );
 // clang-format on
