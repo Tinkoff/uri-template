@@ -100,7 +100,7 @@ Generally, to use this library you need to tell your compiler where to lookup fo
 Easiest way is to install this library onto your system. To do so, execute these commands from `uri-template` folder (sudo may be required):
 
 ```bash
-cmake -H. -Bbuild -DUCONFIG_BUILD_TESTING=OFF -DUCONFIG_BUILD_DOCS=OFF
+cmake -H. -Bbuild -DURITEMPLATE_BUILD_TESTING=OFF -DURITEMPLATE_BUILD_DOCS=OFF
 cmake --build ./build --target install
 ```
 
@@ -128,25 +128,26 @@ cmake --build ./build
 
 To install (sudo may be required):
 ```bash
-cmake -H. -Bbuild -DUCONFIG_BUILD_TESTING=OFF -DUCONFIG_BUILD_DOCS=OFF
+cmake -H. -Bbuild -DURITEMPLATE_BUILD_TESTING=OFF -DURITEMPLATE_BUILD_DOCS=OFF
 cmake --build ./build --target install
 ```
 
 Or test:
 ```bash
-cmake -H. -Bbuild -DUCONFIG_BUILD_TESTING=ON
+cmake -H. -Bbuild -DURITEMPLATE_BUILD_TESTING=ON
 cmake --build ./build
 cmake -E chdir ./build ctest --output-on-failure
 ```
 
-*All these commands assume you are in uconfig root folder*
+*All these commands assume you are in uri-template root folder*
 
 ### Cmake options
 
 * **CMAKE_BUILD_TYPE** – [build type](https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html). `RelWithDebInfo` by default.
 * **BUILD_SHARED_LIBS** – [build shared or static library](https://cmake.org/cmake/help/v3.0/variable/BUILD_SHARED_LIBS.html). `OFF` by default.
-* **UCONFIG_BUILD_TESTING** – build included unit-tests. `OFF` by default.
-* **UCONFIG_BUILD_DOCS** – build html (sphinx) reference docs. `OFF` by default.
+* **URITEMPLATE_BUILD_TESTING** – build included unit-tests. `OFF` by default.
+* **URITEMPLATE_BUILD_DOCS** – build html (sphinx) reference docs. `OFF` by default.
+* **URITEMPLATE_BUILD_EXAMPLE** – build [example](./example/Example.cpp). `OFF` by default.
 
 ## License
 

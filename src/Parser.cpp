@@ -92,6 +92,9 @@ URI::Template::Expression URI::Template::ParseExpression(const std::string& expr
     if (!var_name.empty()) {
         variables.emplace_back(std::move(var_name), std::move(var_mod), ModLength::ToNumber(var_len));
     }
+    if (variables.empty()) {
+        throw std::runtime_error("expression '" + expr_string + "' is empty");
+    }
     return Expression(std::move(expr_oper), std::move(variables));
 }
 
